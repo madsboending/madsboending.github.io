@@ -1,4 +1,4 @@
-title: Mads Bønding
+﻿title: Mads Bønding
 description: Data enthusiast and useR trying to climb the learning curve
 
 url: http://madsboending.github.io
@@ -19,9 +19,7 @@ navigation:
    url: /contact
 
 social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
+   facebook: https://www.facebook.com/mads.boending
+   email: mads_boending@hotmail.com
 
-google_analytics: "UA-58263416-1"
+google_analytics: ""
