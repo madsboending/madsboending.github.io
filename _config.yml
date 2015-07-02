@@ -1,6 +1,8 @@
 ﻿title: Mads Bønding
 description: Data enthusiast and useR trying to climb the learning curve
 
+encoding: UTF-8
+
 url: http://madsboending.github.io
 baseurl: ""
 paginate_path: "blog/page:num/"
