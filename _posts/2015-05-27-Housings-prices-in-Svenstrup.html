@@ -3,7 +3,7 @@ layout: post
 title:  "Housing prices in Svenstrup"
 date:   2015-05-27
 ---
-So, my girlfriend and I recently became the proud owners of our first house in Svenstrup. Naturally, the process of bidding on and buying a house sparked some curiosity and thought about housing prices in Svenstrup and the 9230 zip code in general. Questions like <i>How do prices vary between different neighborhoods? Which neighborhood is the most expensive? Are there significant differences in sq.meter prices between e.g. Svenstrup and Godthåb? </i> came to mind.Therefore I decided to take a closer look at the housing market in the 9230 zip code with the primary aim of creating an interactive map of housing sales.
+So, my girlfriend and I recently became the proud owners of our first house in Svenstrup. Naturally, the process of bidding on and buying a house sparked some curiosity and thought about housing prices in Svenstrup and the 9230 zip code in general. Questions like <i>How do prices vary between different neighborhoods? Which neighborhood is the most expensive? Are there significant differences in sq.meter prices between e.g. Svenstrup and Godthåb? </i> came to mind. I thought a fun way to gain some insight were to create an interactive of housing prices which is the primary aim of this post.
 
 <br>
 <br>
@@ -18,7 +18,7 @@ First up I needed to collect some data on housing sales. Fortunately <a href="ht
   <li>Ordinary free sale</li>
 </ul>
 
-I scraped and downloaded the search results using import.io's web crawler and after a bit of data cleaning I ended up with a dataset of 1565 observations/house sales within the specified period and criteria. Note that there is a discrepancy between the number of search results returned by Boliga and the number of sales extracted by the web crawler and I estimate that the 1565 extracted observations represent about 85% of the actual number of sales in the period. The dataset contains variables <i>Address, Price, Date of sale, Type of sale, Price pr. sq.meter, Number of rooms, Sq.meter size, Housing type, Year of construction, Price reduction in percent. </i> Moreover, the data only contains the latest sale e.g. if Jættestuen 17 were sold in both 1998 and 2006 then only the 2006 sale is included in the data
+I scraped and downloaded the search results using import.io's web crawler and after a bit of data cleaning I ended up with a dataset of 1565 observations/house sales within the specified period and criteria. Note that there is a discrepancy between the number of search results returned by Boliga and the number of sales extracted by the web crawler and the 1565 extracted observations will roughly represent about 85% of the actual number of sales in the period (I didn't bother tweaking the scraper or trying other tools to increase performance). The dataset contains variables <i>Address, Price, Date of sale, Type of sale, Price pr. sq.meter, Number of rooms, Sq.meter size, Housing type, Year of construction, Price reduction in percent. </i> Moreover, the data only contains the latest sale e.g. if Jættestuen 17 were sold in both 1998 and 2006 then only the 2006 sale is included in the data
 
 <br>
 <br>
@@ -31161,7 +31161,7 @@ So the sales data is secured but the goal is to plot these sales on an interacti
 <br>
 <br>
 
-A bit of data wrangling and the map above magically appears. Each sale is adjusted for inflation and calculated in 2014 prices. Note that the calculated 2014-price for a given house sold in e.g. 1995 isn't an actual prediction of the present value of that house. Obviously, a lot of other factors affects housing prices like home improvements for example, which means that in this context the calculated 2014-prices solely illustrates what a given home sold in 1995 would cost in 2014-prices keeping all other things equal. Every sale is categorized into percentiles based on the 2014-price e.g. 90-100% represents the top 10% most expensive sales in 2014-prices and 25-75% represents the middle 50% of all sales based on 2014-prices.
+A bit of data wrangling and the map above magically appears. Each sale is adjusted for inflation and calculated in 2014 prices. Note that the calculated 2014-price for a given house sold in e.g. 1995 isn't an actual prediction of the present value of that house. Obviously, a lot of other factors affects housing prices,  like home improvements for example. This means that the calculated 2014-prices solely illustrates what a given home sold in 1995 would cost in 2014-prices keeping all other things equal. Every sale is categorized into percentiles based on the 2014-price e.g. 90-100% represents the top 10% most expensive sales in 2014-prices and 25-75% represents the middle 50% of all sales based on 2014-prices.
 
 <br>
 <br>
@@ -31171,17 +31171,13 @@ While the map above shows absolute prices it could be equally interesting to map
 <br>
 <br>
 
-Zooming in on Svenstrup/Godthåb, the map reveals clear clusters of red dots centered around <i>Svenstruphøj, Asgården, Midgården, Lunden and Birkagervænget</i>. These are the most expensive neighbourhoods in Svenstrup/Godthåb measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't let you identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every buiding plot in Svenstrup/Godthåb is located in exactly the five neighbourhoods mentioned above <i>(building plots are removed from the map above)</i>.
+Zooming in on Svenstrup/Godthåb, a visual inspection reveals clear clusters of red dots centered around <i>Svenstruphøj, Asgården, Midgården, Lunden and Birkagervænget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/Godthåb measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't let you identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/Godthåb is located in exactly the five neighborhoods mentioned above - meaning that it's the relatively new neighborhoods in the area that selling with the highest prices. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or Godth�b, which might suggest that out of the five cities in 9230 these two are experiencing the most growth <i>(building plots are removed from the map above)</i>.
 
 <br>
 <br>
 
 <img src="https://raw.githubusercontent.com/madsboending/madsboending.github.io/master/assets/img/boxplot2.png" alt="boxplot">
 
-
-
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
 If you preer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.
 
