@@ -3,7 +3,7 @@ layout: post
 title:  "Housing prices in Svenstrup"
 date:   2015-05-27
 ---
-So, my girlfriend and I recently became the proud owners of our first house in Svenstrup. Naturally, the process of bidding on and buying a house sparked some curiosity and thought about housing prices in Svenstrup and the 9230 zip code in general. Questions like <i>How do prices vary between different neighborhoods? Which neighborhood is the most expensive? Are there significant differences in sq.meter prices between e.g. Svenstrup and GodthÃ¥b? </i> came to mind. I thought a fun way to gain some insight would be to create an interactive map of housing prices which is the primary aim of this post.
+So, my girlfriend and I recently became the proud owners of our first house in Svenstrup. Naturally, the process of bidding on and buying a house sparked some curiosity and thought about housing prices in Svenstrup and the 9230 zip code in general. Questions like <i>How do prices vary between different neighborhoods? Which neighborhood is the most expensive? Are there significant differences in sq.meter prices between e.g. Svenstrup and Godthåb? </i> came to mind. I thought a fun way to gain some insight would be to create an interactive map of housing prices which is the primary aim of this post.
 
 <br>
 <br>
@@ -14,11 +14,11 @@ First up I needed to collect some data on housing sales. Fortunately <a href="ht
 <ul style="list-style-type:square">
   <li>Years 1992 till 2014</li>
   <li>Zipcode 9230</li>
-  <li>Housetype: Country house(landejendom), Villa, Apartments (ejerlejlighed), townhouse (rÃ¦kkehus) </li>
+  <li>Housetype: Country house(landejendom), Villa, Apartments (ejerlejlighed), townhouse (rækkehus) </li>
   <li>Ordinary free sale</li>
 </ul>
 
-I scraped and downloaded the search results using import.io's web crawler and after a bit of data cleaning I ended up with a dataset of 1565 observations/house sales within the specified period and criteria. Note that there is a discrepancy between the number of search results returned by Boliga and the number of sales extracted by the web crawler and the 1565 extracted observations will roughly represent about 85% of the actual number of sales in the period (I didn't bother tweaking the scraper or trying other tools to increase performance). The dataset contains variables <i>Address, Price, Date of sale, Type of sale, Price pr. sq.meter, Number of rooms, Sq.meter size, Housing type, Year of construction, Price reduction in percent. </i> Moreover, the data only contains the latest sale e.g. if JÃ¦ttestuen 17 were sold in both 1998 and 2006 then only the 2006 sale is included in the data
+I scraped and downloaded the search results using import.io's web crawler and after a bit of data cleaning I ended up with a dataset of 1565 observations/house sales within the specified period and criteria. Note that there is a discrepancy between the number of search results returned by Boliga and the number of sales extracted by the web crawler and the 1565 extracted observations will roughly represent about 85% of the actual number of sales in the period (I didn't bother tweaking the scraper or trying other tools to see if it would increase performance). The dataset contains variables <i>Address, Price, Date of sale, Type of sale, Price pr. sq.meter, Number of rooms, Sq.meter size, Housing type, Year of construction, Price reduction in percent. </i> Moreover, the data only contains the latest sale e.g. if Jættestuen 17 were sold in both 1998 and 2006 then only the 2006 sale is included in the data
 
 <br>
 <br>
@@ -31171,7 +31171,7 @@ While the map above shows absolute prices it could be equally interesting to map
 <br>
 <br>
 
-Zooming in on Svenstrup/GodthÃ¥b, a visual inspection reveals clear clusters of red dots centered around <i>SvenstruphÃ¸j, AsgÃ¥rden, MidgÃ¥rden, Lunden and BirkagervÃ¦nget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/GodthÃ¥b measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/GodthÃ¥b is located in exactly the five neighborhoods mentioned above - meaning that it's the newly established neighborhoods that are raking in the highest prices. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or GodthÃ¥b, which might suggest that out of the five cities in 9230 these two are experiencing the most growth <i>(building plots are removed from the map above)</i>.
+Zooming in on Svenstrup/Godthåb, a visual inspection reveals clear clusters of red dots centered around <i>Svenstruphøj, Asgården, Midgården, Lunden and Birkagervænget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/Godthåb measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/Godthåb is located in exactly the five neighborhoods mentioned above - meaning that it's the newly established neighborhoods that are raking in the highest prices. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or Godthåb, which might suggest that out of the five cities in 9230 these two are experiencing the most growth <i>(building plots are removed from the map above)</i>.
 
 <br>
 <br>
