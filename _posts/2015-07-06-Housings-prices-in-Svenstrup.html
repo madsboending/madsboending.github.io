@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Housing prices in Svenstrup"
-date:   2015-05-27
+date:   2015-07-06
 ---
 <meta charset="UTF-8">
 
-So, my girlfriend and I recently became the proud owners of our first house in Svenstrup. Naturally, the process of bidding on and buying a house sparked some curiosity and thought about housing prices in Svenstrup and the 9230 zip code in general. Questions like <i>How do prices vary between different neighborhoods? Which neighborhood is the most expensive? Are there significant differences in sq.meter prices between e.g. Svenstrup and Godthåb? </i> came to mind. I thought a fun way to gain some insight would be to create an interactive map of housing prices which will be the aim of this post.
+So, my girlfriend and I recently became the proud owners of our first house in Svenstrup. Naturally, the process of bidding on and buying a house sparked some curiosity and thought about housing prices in Svenstrup and the 9230 zip code in general. Questions like <i>How do prices vary between different neighborhoods? Which neighborhood is the most expensive? Are there significant differences in sq.meter prices between e.g. Svenstrup and GodthÃ¥b? </i> came to mind. I thought a fun way to gain some insight would be to create an interactive map of housing prices which will be the aim of this post.
 
 <br>
 <br>
@@ -16,11 +16,11 @@ First up I needed to collect some data on housing sales. Fortunately <a href="ht
 <ul style="list-style-type:square">
   <li>Years 1992 till 2014</li>
   <li>Zipcode 9230</li>
-  <li>Housetype: Country house(landejendom), Villa, Apartments (ejerlejlighed), townhouse (rækkehus) </li>
+  <li>Housetype: Country house(landejendom), Villa, Apartments (ejerlejlighed), townhouse (rÃ¦kkehus) </li>
   <li>Ordinary free sale</li>
 </ul>
 
-I scraped and downloaded the search results using import.io's web crawler and after a bit of data cleaning I ended up with a dataset of 1565 observations/house sales within the specified period and criteria. Note that there is a discrepancy between the number of search results returned by Boliga and the number of sales extracted by the web crawler and the 1565 extracted observations will roughly represent about 85% of the actual number of sales in the period (I didn't bother tweaking the scraper or trying other tools to see if it would increase performance). The dataset contains variables <i>Address, Price, Date of sale, Type of sale, Price pr. sq.meter, Number of rooms, Sq.meter size, Housing type, Year of construction, Price reduction in percent. </i> Moreover, the data only contains the latest sale e.g. if Jættestuen 17 were sold in both 1998 and 2006 then only the 2006 sale is included in the data
+I scraped and downloaded the search results using import.io's web crawler and after a bit of data cleaning I ended up with a dataset of 1565 observations/house sales within the specified period and criteria. Note that there is a discrepancy between the number of search results returned by Boliga and the number of sales extracted by the web crawler and the 1565 extracted observations will roughly represent about 85% of the actual number of sales in the period (I didn't bother tweaking the scraper or trying other tools to see if it would increase performance). The dataset contains variables <i>Address, Price, Date of sale, Type of sale, Price pr. sq.meter, Number of rooms, Sq.meter size, Housing type, Year of construction, Price reduction in percent. </i> Moreover, the data only contains the latest sale e.g. if JÃ¦ttestuen 17 were sold in both 1998 and 2006 then only the 2006 sale is included in the data
 
 <br>
 <br>
@@ -413,7 +413,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 12",
+		        "Address": "AsgÃ¥rden 12",
 		        "Price": "1547500",
 		        "2014-price": "1606272",
 		        "Price-reduction": "NA",
@@ -436,7 +436,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 15",
+		        "Address": "AsgÃ¥rden 15",
 		        "Price": "2900000",
 		        "2014-price": "2916581",
 		        "Price-reduction": "-3",
@@ -459,7 +459,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 16",
+		        "Address": "AsgÃ¥rden 16",
 		        "Price": "2510000",
 		        "2014-price": "2510000",
 		        "Price-reduction": "-3",
@@ -482,7 +482,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 2",
+		        "Address": "AsgÃ¥rden 2",
 		        "Price": "3010000",
 		        "2014-price": "3027210",
 		        "Price-reduction": "-7",
@@ -505,7 +505,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 24",
+		        "Address": "AsgÃ¥rden 24",
 		        "Price": "2650000",
 		        "2014-price": "3029328",
 		        "Price-reduction": "NA",
@@ -528,7 +528,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 33",
+		        "Address": "AsgÃ¥rden 33",
 		        "Price": "2800000",
 		        "2014-price": "2986318",
 		        "Price-reduction": "NA",
@@ -551,7 +551,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 39",
+		        "Address": "AsgÃ¥rden 39",
 		        "Price": "2750000",
 		        "2014-price": "3000636",
 		        "Price-reduction": "-5",
@@ -574,7 +574,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Asgården 43",
+		        "Address": "AsgÃ¥rden 43",
 		        "Price": "3200000",
 		        "2014-price": "3243499",
 		        "Price-reduction": "-2",
@@ -1172,7 +1172,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 10",
+		        "Address": "BirkagervÃ¦nget 10",
 		        "Price": "1660000",
 		        "2014-price": "1723044",
 		        "Price-reduction": "-2",
@@ -1195,7 +1195,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 11",
+		        "Address": "BirkagervÃ¦nget 11",
 		        "Price": "2300000",
 		        "2014-price": "2331265",
 		        "Price-reduction": "-4",
@@ -1218,7 +1218,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 16",
+		        "Address": "BirkagervÃ¦nget 16",
 		        "Price": "2440000",
 		        "2014-price": "2532668",
 		        "Price-reduction": "-2",
@@ -1241,7 +1241,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 18",
+		        "Address": "BirkagervÃ¦nget 18",
 		        "Price": "3200000",
 		        "2014-price": "3321531",
 		        "Price-reduction": "-2",
@@ -1264,7 +1264,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 2",
+		        "Address": "BirkagervÃ¦nget 2",
 		        "Price": "655000",
 		        "2014-price": "998511",
 		        "Price-reduction": "NA",
@@ -1287,7 +1287,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 20",
+		        "Address": "BirkagervÃ¦nget 20",
 		        "Price": "2800000",
 		        "2014-price": "2838061",
 		        "Price-reduction": "-7",
@@ -1310,7 +1310,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 21",
+		        "Address": "BirkagervÃ¦nget 21",
 		        "Price": "3000000",
 		        "2014-price": "3199627",
 		        "Price-reduction": "NA",
@@ -1333,7 +1333,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 25",
+		        "Address": "BirkagervÃ¦nget 25",
 		        "Price": "3033000",
 		        "2014-price": "3148189",
 		        "Price-reduction": "-2",
@@ -1356,7 +1356,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 26",
+		        "Address": "BirkagervÃ¦nget 26",
 		        "Price": "2450000",
 		        "2014-price": "2450000",
 		        "Price-reduction": "-2",
@@ -1379,7 +1379,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 34",
+		        "Address": "BirkagervÃ¦nget 34",
 		        "Price": "3340000",
 		        "2014-price": "3359097",
 		        "Price-reduction": "-7",
@@ -1402,7 +1402,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 6",
+		        "Address": "BirkagervÃ¦nget 6",
 		        "Price": "645000",
 		        "2014-price": "995433",
 		        "Price-reduction": "NA",
@@ -1425,7 +1425,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Birkagervænget 8",
+		        "Address": "BirkagervÃ¦nget 8",
 		        "Price": "1850000",
 		        "2014-price": "1875148",
 		        "Price-reduction": "-2",
@@ -1448,7 +1448,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 11",
+		        "Address": "BlishÃ¸nevej 11",
 		        "Price": "1740000",
 		        "2014-price": "1989068",
 		        "Price-reduction": "NA",
@@ -1471,7 +1471,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 15",
+		        "Address": "BlishÃ¸nevej 15",
 		        "Price": "1765000",
 		        "2014-price": "2017647",
 		        "Price-reduction": "NA",
@@ -1494,7 +1494,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 24",
+		        "Address": "BlishÃ¸nevej 24",
 		        "Price": "1110000",
 		        "2014-price": "1338948",
 		        "Price-reduction": "NA",
@@ -1517,7 +1517,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 26",
+		        "Address": "BlishÃ¸nevej 26",
 		        "Price": "767000",
 		        "2014-price": "1183717",
 		        "Price-reduction": "NA",
@@ -1540,7 +1540,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 28",
+		        "Address": "BlishÃ¸nevej 28",
 		        "Price": "533000",
 		        "2014-price": "764134",
 		        "Price-reduction": "NA",
@@ -1563,7 +1563,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 3",
+		        "Address": "BlishÃ¸nevej 3",
 		        "Price": "1690000",
 		        "2014-price": "1844027",
 		        "Price-reduction": "0",
@@ -1586,7 +1586,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 30",
+		        "Address": "BlishÃ¸nevej 30",
 		        "Price": "1590000",
 		        "2014-price": "1695802",
 		        "Price-reduction": "-5",
@@ -1609,7 +1609,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blishønevej 32",
+		        "Address": "BlishÃ¸nevej 32",
 		        "Price": "850000",
 		        "2014-price": "1142437",
 		        "Price-reduction": "NA",
@@ -1632,7 +1632,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blågranvej 2",
+		        "Address": "BlÃ¥granvej 2",
 		        "Price": "1975000",
 		        "2014-price": "2296356",
 		        "Price-reduction": "NA",
@@ -1655,7 +1655,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blågranvej 25",
+		        "Address": "BlÃ¥granvej 25",
 		        "Price": "2735000",
 		        "2014-price": "2735000",
 		        "Price-reduction": "-9",
@@ -1678,7 +1678,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blåmejsevej 1",
+		        "Address": "BlÃ¥mejsevej 1",
 		        "Price": "1310000",
 		        "2014-price": "1580200",
 		        "Price-reduction": "NA",
@@ -1701,7 +1701,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blåmejsevej 4",
+		        "Address": "BlÃ¥mejsevej 4",
 		        "Price": "995000",
 		        "2014-price": "1370622",
 		        "Price-reduction": "NA",
@@ -1724,7 +1724,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Blåmejsevej 5",
+		        "Address": "BlÃ¥mejsevej 5",
 		        "Price": "891000",
 		        "2014-price": "1249951",
 		        "Price-reduction": "NA",
@@ -3058,7 +3058,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bævervej 10",
+		        "Address": "BÃ¦vervej 10",
 		        "Price": "800000",
 		        "2014-price": "810875",
 		        "Price-reduction": "-20",
@@ -3081,7 +3081,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bævervej 16",
+		        "Address": "BÃ¦vervej 16",
 		        "Price": "500000",
 		        "2014-price": "701431",
 		        "Price-reduction": "NA",
@@ -3104,7 +3104,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bævervej 3",
+		        "Address": "BÃ¦vervej 3",
 		        "Price": "1525000",
 		        "2014-price": "1743293",
 		        "Price-reduction": "-9",
@@ -3127,7 +3127,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bævervej 4",
+		        "Address": "BÃ¦vervej 4",
 		        "Price": "1065000",
 		        "2014-price": "1105447",
 		        "Price-reduction": "-7",
@@ -3150,7 +3150,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bævervej 8",
+		        "Address": "BÃ¦vervej 8",
 		        "Price": "1445000",
 		        "2014-price": "1712038",
 		        "Price-reduction": "NA",
@@ -3173,7 +3173,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bævervej 9",
+		        "Address": "BÃ¦vervej 9",
 		        "Price": "1620000",
 		        "2014-price": "1791007",
 		        "Price-reduction": "-4",
@@ -3196,7 +3196,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgemarksvej 7",
+		        "Address": "BÃ¸gemarksvej 7",
 		        "Price": "1200000",
 		        "2014-price": "1530965",
 		        "Price-reduction": "NA",
@@ -3219,7 +3219,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 10",
+		        "Address": "BÃ¸gevej 10",
 		        "Price": "1140000",
 		        "2014-price": "1420084",
 		        "Price-reduction": "NA",
@@ -3242,7 +3242,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 11",
+		        "Address": "BÃ¸gevej 11",
 		        "Price": "2050000",
 		        "2014-price": "2077866",
 		        "Price-reduction": "-5",
@@ -3265,7 +3265,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 12",
+		        "Address": "BÃ¸gevej 12",
 		        "Price": "1567191",
 		        "2014-price": "1671475",
 		        "Price-reduction": "NA",
@@ -3288,7 +3288,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 13",
+		        "Address": "BÃ¸gevej 13",
 		        "Price": "2200000",
 		        "2014-price": "2400509",
 		        "Price-reduction": "NA",
@@ -3311,7 +3311,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 14",
+		        "Address": "BÃ¸gevej 14",
 		        "Price": "750000",
 		        "2014-price": "778484",
 		        "Price-reduction": "NA",
@@ -3334,7 +3334,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 16",
+		        "Address": "BÃ¸gevej 16",
 		        "Price": "1050000",
 		        "2014-price": "1220847",
 		        "Price-reduction": "NA",
@@ -3357,7 +3357,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 1B",
+		        "Address": "BÃ¸gevej 1B",
 		        "Price": "2050000",
 		        "2014-price": "2343443",
 		        "Price-reduction": "NA",
@@ -3380,7 +3380,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 1C",
+		        "Address": "BÃ¸gevej 1C",
 		        "Price": "1730000",
 		        "2014-price": "1739892",
 		        "Price-reduction": "-4",
@@ -3403,7 +3403,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 1E",
+		        "Address": "BÃ¸gevej 1E",
 		        "Price": "1875000",
 		        "2014-price": "2143393",
 		        "Price-reduction": "0",
@@ -3426,7 +3426,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 4",
+		        "Address": "BÃ¸gevej 4",
 		        "Price": "725000",
 		        "2014-price": "903123",
 		        "Price-reduction": "NA",
@@ -3449,7 +3449,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 5",
+		        "Address": "BÃ¸gevej 5",
 		        "Price": "1575000",
 		        "2014-price": "1800450",
 		        "Price-reduction": "-6",
@@ -3472,7 +3472,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Bøgevej 7",
+		        "Address": "BÃ¸gevej 7",
 		        "Price": "1375000",
 		        "2014-price": "1393691",
 		        "Price-reduction": "-1",
@@ -4507,7 +4507,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Dall Møllevej 15",
+		        "Address": "Dall MÃ¸llevej 15",
 		        "Price": "5500000",
 		        "2014-price": "8488189",
 		        "Price-reduction": "NA",
@@ -4530,7 +4530,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Dall Møllevej 2",
+		        "Address": "Dall MÃ¸llevej 2",
 		        "Price": "530000",
 		        "2014-price": "616237",
 		        "Price-reduction": "NA",
@@ -4553,7 +4553,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Dall Møllevej 29",
+		        "Address": "Dall MÃ¸llevej 29",
 		        "Price": "1475000",
 		        "2014-price": "1747582",
 		        "Price-reduction": "NA",
@@ -4576,7 +4576,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Dall Møllevej 33",
+		        "Address": "Dall MÃ¸llevej 33",
 		        "Price": "5788182",
 		        "2014-price": "5866863",
 		        "Price-reduction": "NA",
@@ -6968,7 +6968,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøj Banevej 27",
+		        "Address": "EllidshÃ¸j Banevej 27",
 		        "Price": "1500000",
 		        "2014-price": "1868531",
 		        "Price-reduction": "NA",
@@ -6991,7 +6991,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjgårdvej 10",
+		        "Address": "EllidshÃ¸jgÃ¥rdvej 10",
 		        "Price": "2500000",
 		        "2014-price": "2594946",
 		        "Price-reduction": "-28",
@@ -7014,7 +7014,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjgårdvej 15",
+		        "Address": "EllidshÃ¸jgÃ¥rdvej 15",
 		        "Price": "1050000",
 		        "2014-price": "1244041",
 		        "Price-reduction": "NA",
@@ -7037,7 +7037,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjgårdvej 25",
+		        "Address": "EllidshÃ¸jgÃ¥rdvej 25",
 		        "Price": "1750000",
 		        "2014-price": "2179953",
 		        "Price-reduction": "NA",
@@ -7060,7 +7060,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 25",
+		        "Address": "EllidshÃ¸jvej 25",
 		        "Price": "1600000",
 		        "2014-price": "2089473",
 		        "Price-reduction": "NA",
@@ -7083,7 +7083,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 27",
+		        "Address": "EllidshÃ¸jvej 27",
 		        "Price": "620000",
 		        "2014-price": "747881",
 		        "Price-reduction": "NA",
@@ -7106,7 +7106,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 30",
+		        "Address": "EllidshÃ¸jvej 30",
 		        "Price": "1440000",
 		        "2014-price": "1737014",
 		        "Price-reduction": "NA",
@@ -7129,7 +7129,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 34",
+		        "Address": "EllidshÃ¸jvej 34",
 		        "Price": "795000",
 		        "2014-price": "1014264",
 		        "Price-reduction": "NA",
@@ -7152,7 +7152,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 36",
+		        "Address": "EllidshÃ¸jvej 36",
 		        "Price": "1100000",
 		        "2014-price": "1303282",
 		        "Price-reduction": "NA",
@@ -7175,7 +7175,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 40",
+		        "Address": "EllidshÃ¸jvej 40",
 		        "Price": "950000",
 		        "2014-price": "1036583",
 		        "Price-reduction": "-13",
@@ -7198,7 +7198,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 42",
+		        "Address": "EllidshÃ¸jvej 42",
 		        "Price": "615171",
 		        "2014-price": "656106",
 		        "Price-reduction": "-54",
@@ -7221,7 +7221,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 44",
+		        "Address": "EllidshÃ¸jvej 44",
 		        "Price": "225000",
 		        "2014-price": "239972",
 		        "Price-reduction": "NA",
@@ -7244,7 +7244,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 49",
+		        "Address": "EllidshÃ¸jvej 49",
 		        "Price": "1795000",
 		        "2014-price": "1958597",
 		        "Price-reduction": "0",
@@ -7267,7 +7267,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 52",
+		        "Address": "EllidshÃ¸jvej 52",
 		        "Price": "501000",
 		        "2014-price": "702834",
 		        "Price-reduction": "NA",
@@ -7290,7 +7290,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 53",
+		        "Address": "EllidshÃ¸jvej 53",
 		        "Price": "1450000",
 		        "2014-price": "1582154",
 		        "Price-reduction": "-9",
@@ -7313,7 +7313,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 58",
+		        "Address": "EllidshÃ¸jvej 58",
 		        "Price": "595000",
 		        "2014-price": "704957",
 		        "Price-reduction": "NA",
@@ -7336,7 +7336,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 66",
+		        "Address": "EllidshÃ¸jvej 66",
 		        "Price": "875000",
 		        "2014-price": "1000250",
 		        "Price-reduction": "-2",
@@ -7359,7 +7359,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 68",
+		        "Address": "EllidshÃ¸jvej 68",
 		        "Price": "545000",
 		        "2014-price": "678900",
 		        "Price-reduction": "NA",
@@ -7382,7 +7382,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 74",
+		        "Address": "EllidshÃ¸jvej 74",
 		        "Price": "885000",
 		        "2014-price": "943890",
 		        "Price-reduction": "NA",
@@ -7405,7 +7405,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 76",
+		        "Address": "EllidshÃ¸jvej 76",
 		        "Price": "380726",
 		        "2014-price": "569015",
 		        "Price-reduction": "NA",
@@ -7428,7 +7428,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 82",
+		        "Address": "EllidshÃ¸jvej 82",
 		        "Price": "648500",
 		        "2014-price": "691653",
 		        "Price-reduction": "-49",
@@ -7451,7 +7451,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 84",
+		        "Address": "EllidshÃ¸jvej 84",
 		        "Price": "1035000",
 		        "2014-price": "1183153",
 		        "Price-reduction": "NA",
@@ -7474,7 +7474,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 86",
+		        "Address": "EllidshÃ¸jvej 86",
 		        "Price": "1025000",
 		        "2014-price": "1025000",
 		        "Price-reduction": "-6",
@@ -7497,7 +7497,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 93",
+		        "Address": "EllidshÃ¸jvej 93",
 		        "Price": "417326",
 		        "2014-price": "532426",
 		        "Price-reduction": "NA",
@@ -7520,7 +7520,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ellidshøjvej 96",
+		        "Address": "EllidshÃ¸jvej 96",
 		        "Price": "825000",
 		        "2014-price": "836215",
 		        "Price-reduction": "-8",
@@ -8187,7 +8187,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Flødalvej 15",
+		        "Address": "FlÃ¸dalvej 15",
 		        "Price": "875000",
 		        "2014-price": "1067681",
 		        "Price-reduction": "NA",
@@ -8210,7 +8210,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Flødalvej 18",
+		        "Address": "FlÃ¸dalvej 18",
 		        "Price": "3850000",
 		        "2014-price": "4911847",
 		        "Price-reduction": "NA",
@@ -8233,7 +8233,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Flødalvej 25",
+		        "Address": "FlÃ¸dalvej 25",
 		        "Price": "4400000",
 		        "2014-price": "5029828",
 		        "Price-reduction": "NA",
@@ -8256,7 +8256,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Flødalvej 28",
+		        "Address": "FlÃ¸dalvej 28",
 		        "Price": "1000000",
 		        "2014-price": "1275804",
 		        "Price-reduction": "NA",
@@ -8279,7 +8279,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Frederikshøjvej 11",
+		        "Address": "FrederikshÃ¸jvej 11",
 		        "Price": "1350000",
 		        "2014-price": "1859639",
 		        "Price-reduction": "NA",
@@ -8302,7 +8302,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Frederikshøjvej 13",
+		        "Address": "FrederikshÃ¸jvej 13",
 		        "Price": "1009763",
 		        "2014-price": "1015536",
 		        "Price-reduction": "NA",
@@ -8325,7 +8325,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Frederikshøjvej 3",
+		        "Address": "FrederikshÃ¸jvej 3",
 		        "Price": "1200000",
 		        "2014-price": "1464248",
 		        "Price-reduction": "NA",
@@ -8348,7 +8348,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Fyrtøjet 17",
+		        "Address": "FyrtÃ¸jet 17",
 		        "Price": "759000",
 		        "2014-price": "1111127",
 		        "Price-reduction": "NA",
@@ -8371,7 +8371,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Fyrtøjet 18",
+		        "Address": "FyrtÃ¸jet 18",
 		        "Price": "580000",
 		        "2014-price": "884178",
 		        "Price-reduction": "NA",
@@ -8394,7 +8394,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Fyrtøjet 2",
+		        "Address": "FyrtÃ¸jet 2",
 		        "Price": "2300000",
 		        "2014-price": "2674237",
 		        "Price-reduction": "NA",
@@ -8417,7 +8417,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Fyrtøjet 20",
+		        "Address": "FyrtÃ¸jet 20",
 		        "Price": "1350000",
 		        "2014-price": "1599482",
 		        "Price-reduction": "NA",
@@ -8440,7 +8440,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Fyrtøjet 3",
+		        "Address": "FyrtÃ¸jet 3",
 		        "Price": "1265408",
 		        "2014-price": "1614413",
 		        "Price-reduction": "NA",
@@ -9199,7 +9199,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 21",
+		        "Address": "GodthÃ¥bsvej 21",
 		        "Price": "1575000",
 		        "2014-price": "1831271",
 		        "Price-reduction": "NA",
@@ -9222,7 +9222,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 21A",
+		        "Address": "GodthÃ¥bsvej 21A",
 		        "Price": "1589995",
 		        "2014-price": "1695797",
 		        "Price-reduction": "0",
@@ -9245,7 +9245,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 22",
+		        "Address": "GodthÃ¥bsvej 22",
 		        "Price": "1495000",
 		        "2014-price": "1708999",
 		        "Price-reduction": "0",
@@ -9268,7 +9268,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 29",
+		        "Address": "GodthÃ¥bsvej 29",
 		        "Price": "650000",
 		        "2014-price": "809697",
 		        "Price-reduction": "NA",
@@ -9291,7 +9291,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 30C",
+		        "Address": "GodthÃ¥bsvej 30C",
 		        "Price": "243468",
 		        "2014-price": "349047",
 		        "Price-reduction": "NA",
@@ -9314,7 +9314,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 37",
+		        "Address": "GodthÃ¥bsvej 37",
 		        "Price": "495000",
 		        "2014-price": "724648",
 		        "Price-reduction": "NA",
@@ -9337,7 +9337,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 39",
+		        "Address": "GodthÃ¥bsvej 39",
 		        "Price": "1215000",
 		        "2014-price": "1388919",
 		        "Price-reduction": "NA",
@@ -9360,7 +9360,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 41",
+		        "Address": "GodthÃ¥bsvej 41",
 		        "Price": "550000",
 		        "2014-price": "685128",
 		        "Price-reduction": "NA",
@@ -9383,7 +9383,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 43",
+		        "Address": "GodthÃ¥bsvej 43",
 		        "Price": "680000",
 		        "2014-price": "995476",
 		        "Price-reduction": "NA",
@@ -9406,7 +9406,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 44",
+		        "Address": "GodthÃ¥bsvej 44",
 		        "Price": "1100000",
 		        "2014-price": "1257457",
 		        "Price-reduction": "NA",
@@ -9429,7 +9429,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 45",
+		        "Address": "GodthÃ¥bsvej 45",
 		        "Price": "1475000",
 		        "2014-price": "1715000",
 		        "Price-reduction": "NA",
@@ -9452,7 +9452,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 46",
+		        "Address": "GodthÃ¥bsvej 46",
 		        "Price": "520000",
 		        "2014-price": "802520",
 		        "Price-reduction": "NA",
@@ -9475,7 +9475,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 47",
+		        "Address": "GodthÃ¥bsvej 47",
 		        "Price": "1460000",
 		        "2014-price": "1515449",
 		        "Price-reduction": "-2",
@@ -9498,7 +9498,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 48",
+		        "Address": "GodthÃ¥bsvej 48",
 		        "Price": "1320000",
 		        "2014-price": "1370132",
 		        "Price-reduction": "0",
@@ -9521,7 +9521,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 5",
+		        "Address": "GodthÃ¥bsvej 5",
 		        "Price": "600000",
 		        "2014-price": "860188",
 		        "Price-reduction": "NA",
@@ -9544,7 +9544,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 50A",
+		        "Address": "GodthÃ¥bsvej 50A",
 		        "Price": "1472000",
 		        "2014-price": "1492009",
 		        "Price-reduction": "NA",
@@ -9567,7 +9567,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 55",
+		        "Address": "GodthÃ¥bsvej 55",
 		        "Price": "795000",
 		        "2014-price": "805807",
 		        "Price-reduction": "NA",
@@ -9590,7 +9590,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 57C ST",
+		        "Address": "GodthÃ¥bsvej 57C ST",
 		        "Price": "672993",
 		        "2014-price": "878875",
 		        "Price-reduction": "NA",
@@ -9613,7 +9613,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 59",
+		        "Address": "GodthÃ¥bsvej 59",
 		        "Price": "75000",
 		        "2014-price": "103313",
 		        "Price-reduction": "NA",
@@ -9636,7 +9636,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 61",
+		        "Address": "GodthÃ¥bsvej 61",
 		        "Price": "2125000",
 		        "2014-price": "2266402",
 		        "Price-reduction": "-5",
@@ -9659,7 +9659,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 73",
+		        "Address": "GodthÃ¥bsvej 73",
 		        "Price": "981465",
 		        "2014-price": "1281715",
 		        "Price-reduction": "NA",
@@ -9682,7 +9682,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 75",
+		        "Address": "GodthÃ¥bsvej 75",
 		        "Price": "2075000",
 		        "2014-price": "2075000",
 		        "Price-reduction": "0",
@@ -9705,7 +9705,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 77",
+		        "Address": "GodthÃ¥bsvej 77",
 		        "Price": "1324999",
 		        "2014-price": "1690439",
 		        "Price-reduction": "NA",
@@ -9728,7 +9728,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 79B",
+		        "Address": "GodthÃ¥bsvej 79B",
 		        "Price": "1095000",
 		        "2014-price": "1471728",
 		        "Price-reduction": "NA",
@@ -9751,7 +9751,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 79D",
+		        "Address": "GodthÃ¥bsvej 79D",
 		        "Price": "812000",
 		        "2014-price": "1060407",
 		        "Price-reduction": "NA",
@@ -9774,7 +9774,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 81A",
+		        "Address": "GodthÃ¥bsvej 81A",
 		        "Price": "1600000",
 		        "2014-price": "1609148",
 		        "Price-reduction": "-8",
@@ -9797,7 +9797,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 81C",
+		        "Address": "GodthÃ¥bsvej 81C",
 		        "Price": "690000",
 		        "2014-price": "989216",
 		        "Price-reduction": "NA",
@@ -9820,7 +9820,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Godthåbsvej 81D",
+		        "Address": "GodthÃ¥bsvej 81D",
 		        "Price": "1200000",
 		        "2014-price": "1200000",
 		        "Price-reduction": "-7",
@@ -9843,7 +9843,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 1",
+		        "Address": "GrÃ¥stenvej 1",
 		        "Price": "1000000",
 		        "2014-price": "1206260",
 		        "Price-reduction": "NA",
@@ -9866,7 +9866,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 11",
+		        "Address": "GrÃ¥stenvej 11",
 		        "Price": "410000",
 		        "2014-price": "632756",
 		        "Price-reduction": "NA",
@@ -9889,7 +9889,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 15",
+		        "Address": "GrÃ¥stenvej 15",
 		        "Price": "875000",
 		        "2014-price": "1036701",
 		        "Price-reduction": "NA",
@@ -9912,7 +9912,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 16",
+		        "Address": "GrÃ¥stenvej 16",
 		        "Price": "708150",
 		        "2014-price": "1036686",
 		        "Price-reduction": "NA",
@@ -9935,7 +9935,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 2",
+		        "Address": "GrÃ¥stenvej 2",
 		        "Price": "765000",
 		        "2014-price": "1166200",
 		        "Price-reduction": "NA",
@@ -9958,7 +9958,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 21",
+		        "Address": "GrÃ¥stenvej 21",
 		        "Price": "656500",
 		        "2014-price": "681433",
 		        "Price-reduction": "NA",
@@ -9981,7 +9981,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 3",
+		        "Address": "GrÃ¥stenvej 3",
 		        "Price": "800000",
 		        "2014-price": "1020643",
 		        "Price-reduction": "NA",
@@ -10004,7 +10004,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 35",
+		        "Address": "GrÃ¥stenvej 35",
 		        "Price": "920000",
 		        "2014-price": "1109759",
 		        "Price-reduction": "NA",
@@ -10027,7 +10027,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 37",
+		        "Address": "GrÃ¥stenvej 37",
 		        "Price": "705920",
 		        "2014-price": "1076136",
 		        "Price-reduction": "NA",
@@ -10050,7 +10050,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 4",
+		        "Address": "GrÃ¥stenvej 4",
 		        "Price": "1800000",
 		        "2014-price": "1810292",
 		        "Price-reduction": "-5",
@@ -10073,7 +10073,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 41",
+		        "Address": "GrÃ¥stenvej 41",
 		        "Price": "824961",
 		        "2014-price": "1157307",
 		        "Price-reduction": "NA",
@@ -10096,7 +10096,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 49",
+		        "Address": "GrÃ¥stenvej 49",
 		        "Price": "1650000",
 		        "2014-price": "2013340",
 		        "Price-reduction": "NA",
@@ -10119,7 +10119,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 5",
+		        "Address": "GrÃ¥stenvej 5",
 		        "Price": "1395000",
 		        "2014-price": "1395000",
 		        "Price-reduction": "-7",
@@ -10142,7 +10142,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 51",
+		        "Address": "GrÃ¥stenvej 51",
 		        "Price": "2162500",
 		        "2014-price": "2174864",
 		        "Price-reduction": "-3",
@@ -10165,7 +10165,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 53",
+		        "Address": "GrÃ¥stenvej 53",
 		        "Price": "2425000",
 		        "2014-price": "2438865",
 		        "Price-reduction": "NA",
@@ -10188,7 +10188,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 61",
+		        "Address": "GrÃ¥stenvej 61",
 		        "Price": "635000",
 		        "2014-price": "980000",
 		        "Price-reduction": "NA",
@@ -10211,7 +10211,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 67",
+		        "Address": "GrÃ¥stenvej 67",
 		        "Price": "1138935",
 		        "2014-price": "1568894",
 		        "Price-reduction": "NA",
@@ -10234,7 +10234,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 69",
+		        "Address": "GrÃ¥stenvej 69",
 		        "Price": "755169",
 		        "2014-price": "1105518",
 		        "Price-reduction": "NA",
@@ -10257,7 +10257,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 7",
+		        "Address": "GrÃ¥stenvej 7",
 		        "Price": "751147",
 		        "2014-price": "1034713",
 		        "Price-reduction": "NA",
@@ -10280,7 +10280,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gråstenvej 8",
+		        "Address": "GrÃ¥stenvej 8",
 		        "Price": "1250000",
 		        "2014-price": "1507825",
 		        "Price-reduction": "NA",
@@ -10303,7 +10303,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Guldbækvej 20",
+		        "Address": "GuldbÃ¦kvej 20",
 		        "Price": "2195000",
 		        "2014-price": "2341060",
 		        "Price-reduction": "0",
@@ -10326,7 +10326,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Guldbækvej 24",
+		        "Address": "GuldbÃ¦kvej 24",
 		        "Price": "691500",
 		        "2014-price": "1033484",
 		        "Price-reduction": "NA",
@@ -10349,7 +10349,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Guldbækvej 45",
+		        "Address": "GuldbÃ¦kvej 45",
 		        "Price": "2950000",
 		        "2014-price": "3495164",
 		        "Price-reduction": "NA",
@@ -10786,7 +10786,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gærdesangervej 2",
+		        "Address": "GÃ¦rdesangervej 2",
 		        "Price": "1100000",
 		        "2014-price": "1106289",
 		        "Price-reduction": "NA",
@@ -10809,7 +10809,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gærdesangervej 3",
+		        "Address": "GÃ¦rdesangervej 3",
 		        "Price": "1285000",
 		        "2014-price": "1550044",
 		        "Price-reduction": "NA",
@@ -10832,7 +10832,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gærdesangervej 7",
+		        "Address": "GÃ¦rdesangervej 7",
 		        "Price": "1995000",
 		        "2014-price": "2176825",
 		        "Price-reduction": "0",
@@ -10855,7 +10855,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Gærdesangervej 8",
+		        "Address": "GÃ¦rdesangervej 8",
 		        "Price": "1154000",
 		        "2014-price": "1169687",
 		        "Price-reduction": "-3",
@@ -11108,7 +11108,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hammerværket 2",
+		        "Address": "HammervÃ¦rket 2",
 		        "Price": "3400000",
 		        "2014-price": "3419440",
 		        "Price-reduction": "5",
@@ -11131,7 +11131,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hammerværket 4 ST TV",
+		        "Address": "HammervÃ¦rket 4 ST TV",
 		        "Price": "1277500",
 		        "2014-price": "1277500",
 		        "Price-reduction": "NA",
@@ -12741,7 +12741,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Holmgårdsvej 20",
+		        "Address": "HolmgÃ¥rdsvej 20",
 		        "Price": "1200000",
 		        "2014-price": "1530965",
 		        "Price-reduction": "NA",
@@ -12764,7 +12764,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Holmgårdsvej 40",
+		        "Address": "HolmgÃ¥rdsvej 40",
 		        "Price": "409000",
 		        "2014-price": "586362",
 		        "Price-reduction": "NA",
@@ -12787,7 +12787,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Holmgårdsvej 50",
+		        "Address": "HolmgÃ¥rdsvej 50",
 		        "Price": "4000000",
 		        "2014-price": "6173228",
 		        "Price-reduction": "NA",
@@ -12810,7 +12810,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 13",
+		        "Address": "HoppevÃ¦nget 13",
 		        "Price": "500000",
 		        "2014-price": "518989",
 		        "Price-reduction": "NA",
@@ -12833,7 +12833,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 15",
+		        "Address": "HoppevÃ¦nget 15",
 		        "Price": "1330014",
 		        "2014-price": "1787597",
 		        "Price-reduction": "NA",
@@ -12856,7 +12856,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 16A",
+		        "Address": "HoppevÃ¦nget 16A",
 		        "Price": "666950",
 		        "2014-price": "956171",
 		        "Price-reduction": "NA",
@@ -12879,7 +12879,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 16B",
+		        "Address": "HoppevÃ¦nget 16B",
 		        "Price": "975000",
 		        "2014-price": "1133644",
 		        "Price-reduction": "NA",
@@ -12902,7 +12902,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 20",
+		        "Address": "HoppevÃ¦nget 20",
 		        "Price": "211651",
 		        "2014-price": "326642",
 		        "Price-reduction": "NA",
@@ -12925,7 +12925,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 22",
+		        "Address": "HoppevÃ¦nget 22",
 		        "Price": "1345000",
 		        "2014-price": "1352690",
 		        "Price-reduction": "-4",
@@ -12948,7 +12948,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 25",
+		        "Address": "HoppevÃ¦nget 25",
 		        "Price": "1200000",
 		        "2014-price": "1683436",
 		        "Price-reduction": "NA",
@@ -12971,7 +12971,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 26",
+		        "Address": "HoppevÃ¦nget 26",
 		        "Price": "565000",
 		        "2014-price": "586458",
 		        "Price-reduction": "-19",
@@ -12994,7 +12994,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 29",
+		        "Address": "HoppevÃ¦nget 29",
 		        "Price": "1255157",
 		        "2014-price": "1686986",
 		        "Price-reduction": "NA",
@@ -13017,7 +13017,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 32",
+		        "Address": "HoppevÃ¦nget 32",
 		        "Price": "994512",
 		        "2014-price": "1369950",
 		        "Price-reduction": "NA",
@@ -13040,7 +13040,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 41",
+		        "Address": "HoppevÃ¦nget 41",
 		        "Price": "970000",
 		        "2014-price": "1360777",
 		        "Price-reduction": "NA",
@@ -13063,7 +13063,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 44",
+		        "Address": "HoppevÃ¦nget 44",
 		        "Price": "864000",
 		        "2014-price": "1291294",
 		        "Price-reduction": "NA",
@@ -13086,7 +13086,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 49",
+		        "Address": "HoppevÃ¦nget 49",
 		        "Price": "784460",
 		        "2014-price": "1100490",
 		        "Price-reduction": "NA",
@@ -13109,7 +13109,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 5",
+		        "Address": "HoppevÃ¦nget 5",
 		        "Price": "1745000",
 		        "2014-price": "1929202",
 		        "Price-reduction": "0",
@@ -13132,7 +13132,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hoppevænget 7",
+		        "Address": "HoppevÃ¦nget 7",
 		        "Price": "1300000",
 		        "2014-price": "1307433",
 		        "Price-reduction": "-7",
@@ -13178,7 +13178,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hvidtjørnevej 4",
+		        "Address": "HvidtjÃ¸rnevej 4",
 		        "Price": "685000",
 		        "2014-price": "1044244",
 		        "Price-reduction": "NA",
@@ -13201,7 +13201,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hvidtjørnevej 5",
+		        "Address": "HvidtjÃ¸rnevej 5",
 		        "Price": "1180000",
 		        "2014-price": "1258520",
 		        "Price-reduction": "-7",
@@ -13224,7 +13224,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hvidtjørnevej 7",
+		        "Address": "HvidtjÃ¸rnevej 7",
 		        "Price": "3120000",
 		        "2014-price": "3627661",
 		        "Price-reduction": "NA",
@@ -13247,7 +13247,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Hvidtjørnevej 8",
+		        "Address": "HvidtjÃ¸rnevej 8",
 		        "Price": "943488",
 		        "2014-price": "1268089",
 		        "Price-reduction": "NA",
@@ -14190,7 +14190,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 1",
+		        "Address": "JÃ¦ttestuen 1",
 		        "Price": "690000",
 		        "2014-price": "1010115",
 		        "Price-reduction": "NA",
@@ -14213,7 +14213,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 11",
+		        "Address": "JÃ¦ttestuen 11",
 		        "Price": "1315000",
 		        "2014-price": "1453811",
 		        "Price-reduction": "NA",
@@ -14236,7 +14236,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 13",
+		        "Address": "JÃ¦ttestuen 13",
 		        "Price": "939000",
 		        "2014-price": "1145774",
 		        "Price-reduction": "NA",
@@ -14259,7 +14259,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 14",
+		        "Address": "JÃ¦ttestuen 14",
 		        "Price": "1290000",
 		        "2014-price": "1474654",
 		        "Price-reduction": "0",
@@ -14282,7 +14282,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 15",
+		        "Address": "JÃ¦ttestuen 15",
 		        "Price": "1300000",
 		        "2014-price": "1386505",
 		        "Price-reduction": "-4",
@@ -14305,7 +14305,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 16",
+		        "Address": "JÃ¦ttestuen 16",
 		        "Price": "1230000",
 		        "2014-price": "1276714",
 		        "Price-reduction": "-5",
@@ -14328,7 +14328,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 17",
+		        "Address": "JÃ¦ttestuen 17",
 		        "Price": "774000",
 		        "2014-price": "1040290",
 		        "Price-reduction": "NA",
@@ -14351,7 +14351,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 18",
+		        "Address": "JÃ¦ttestuen 18",
 		        "Price": "1220000",
 		        "2014-price": "1394634",
 		        "Price-reduction": "-6",
@@ -14374,7 +14374,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 19",
+		        "Address": "JÃ¦ttestuen 19",
 		        "Price": "1145000",
 		        "2014-price": "1160564",
 		        "Price-reduction": "0",
@@ -14397,7 +14397,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 2",
+		        "Address": "JÃ¦ttestuen 2",
 		        "Price": "875000",
 		        "2014-price": "1116329",
 		        "Price-reduction": "NA",
@@ -14420,7 +14420,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 22",
+		        "Address": "JÃ¦ttestuen 22",
 		        "Price": "1110000",
 		        "2014-price": "1116347",
 		        "Price-reduction": "-3",
@@ -14443,7 +14443,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 24",
+		        "Address": "JÃ¦ttestuen 24",
 		        "Price": "1250000",
 		        "2014-price": "1266992",
 		        "Price-reduction": "NA",
@@ -14466,7 +14466,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 26",
+		        "Address": "JÃ¦ttestuen 26",
 		        "Price": "1065000",
 		        "2014-price": "1261813",
 		        "Price-reduction": "NA",
@@ -14489,7 +14489,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 28",
+		        "Address": "JÃ¦ttestuen 28",
 		        "Price": "865000",
 		        "2014-price": "1103571",
 		        "Price-reduction": "NA",
@@ -14512,7 +14512,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 3",
+		        "Address": "JÃ¦ttestuen 3",
 		        "Price": "1165000",
 		        "2014-price": "1354559",
 		        "Price-reduction": "NA",
@@ -14535,7 +14535,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 34",
+		        "Address": "JÃ¦ttestuen 34",
 		        "Price": "1200000",
 		        "2014-price": "1395254",
 		        "Price-reduction": "NA",
@@ -14558,7 +14558,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 38",
+		        "Address": "JÃ¦ttestuen 38",
 		        "Price": "1250000",
 		        "2014-price": "1428929",
 		        "Price-reduction": "NA",
@@ -14581,7 +14581,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 4",
+		        "Address": "JÃ¦ttestuen 4",
 		        "Price": "1295000",
 		        "2014-price": "1381172",
 		        "Price-reduction": "0",
@@ -14604,7 +14604,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 40",
+		        "Address": "JÃ¦ttestuen 40",
 		        "Price": "1235000",
 		        "2014-price": "1251788",
 		        "Price-reduction": "-5",
@@ -14627,7 +14627,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 42",
+		        "Address": "JÃ¦ttestuen 42",
 		        "Price": "579000",
 		        "2014-price": "882653",
 		        "Price-reduction": "NA",
@@ -14650,7 +14650,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 44",
+		        "Address": "JÃ¦ttestuen 44",
 		        "Price": "1160000",
 		        "2014-price": "1160000",
 		        "Price-reduction": "-3",
@@ -14673,7 +14673,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 46",
+		        "Address": "JÃ¦ttestuen 46",
 		        "Price": "1245000",
 		        "2014-price": "1358470",
 		        "Price-reduction": "-1",
@@ -14696,7 +14696,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 8",
+		        "Address": "JÃ¦ttestuen 8",
 		        "Price": "1200000",
 		        "2014-price": "1245574",
 		        "Price-reduction": "-4",
@@ -14719,7 +14719,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Jættestuen 9",
+		        "Address": "JÃ¦ttestuen 9",
 		        "Price": "962000",
 		        "2014-price": "1173838",
 		        "Price-reduction": "NA",
@@ -15777,7 +15777,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Klæstrupholmvej 16",
+		        "Address": "KlÃ¦strupholmvej 16",
 		        "Price": "775000",
 		        "2014-price": "856809",
 		        "Price-reduction": "-3",
@@ -15800,7 +15800,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Klæstrupholmvej 18",
+		        "Address": "KlÃ¦strupholmvej 18",
 		        "Price": "990000",
 		        "2014-price": "1208004",
 		        "Price-reduction": "NA",
@@ -15823,7 +15823,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Klæstrupholmvej 5",
+		        "Address": "KlÃ¦strupholmvej 5",
 		        "Price": "611640",
 		        "2014-price": "895401",
 		        "Price-reduction": "NA",
@@ -16651,7 +16651,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Lærkevej 1",
+		        "Address": "LÃ¦rkevej 1",
 		        "Price": "2175000",
 		        "2014-price": "2319729",
 		        "Price-reduction": "0",
@@ -16674,7 +16674,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Lærkevej 2",
+		        "Address": "LÃ¦rkevej 2",
 		        "Price": "690000",
 		        "2014-price": "1010115",
 		        "Price-reduction": "NA",
@@ -16697,7 +16697,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Lærkevej 3",
+		        "Address": "LÃ¦rkevej 3",
 		        "Price": "1025000",
 		        "2014-price": "1030861",
 		        "Price-reduction": "-5",
@@ -16720,7 +16720,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Lærkevej 6",
+		        "Address": "LÃ¦rkevej 6",
 		        "Price": "2350000",
 		        "2014-price": "2564180",
 		        "Price-reduction": "0",
@@ -16743,7 +16743,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Lærkevej 7",
+		        "Address": "LÃ¦rkevej 7",
 		        "Price": "710000",
 		        "2014-price": "905821",
 		        "Price-reduction": "NA",
@@ -16766,7 +16766,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Lærkevej 9",
+		        "Address": "LÃ¦rkevej 9",
 		        "Price": "740000",
 		        "2014-price": "994592",
 		        "Price-reduction": "NA",
@@ -16789,7 +16789,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 103",
+		        "Address": "MidgÃ¥rden 103",
 		        "Price": "2096800",
 		        "2014-price": "2108789",
 		        "Price-reduction": "NA",
@@ -16812,7 +16812,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 111",
+		        "Address": "MidgÃ¥rden 111",
 		        "Price": "2080000",
 		        "2014-price": "2091893",
 		        "Price-reduction": "NA",
@@ -16835,7 +16835,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 113",
+		        "Address": "MidgÃ¥rden 113",
 		        "Price": "2556000",
 		        "2014-price": "2570614",
 		        "Price-reduction": "NA",
@@ -16858,7 +16858,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 115",
+		        "Address": "MidgÃ¥rden 115",
 		        "Price": "2354000",
 		        "2014-price": "2367459",
 		        "Price-reduction": "NA",
@@ -16881,7 +16881,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 125",
+		        "Address": "MidgÃ¥rden 125",
 		        "Price": "1760000",
 		        "2014-price": "1770063",
 		        "Price-reduction": "NA",
@@ -16904,7 +16904,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 21",
+		        "Address": "MidgÃ¥rden 21",
 		        "Price": "2095000",
 		        "2014-price": "2394884",
 		        "Price-reduction": "NA",
@@ -16927,7 +16927,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 23",
+		        "Address": "MidgÃ¥rden 23",
 		        "Price": "1795000",
 		        "2014-price": "1958597",
 		        "Price-reduction": "0",
@@ -16950,7 +16950,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 25",
+		        "Address": "MidgÃ¥rden 25",
 		        "Price": "1930000",
 		        "2014-price": "1956235",
 		        "Price-reduction": "-3",
@@ -16973,7 +16973,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 3",
+		        "Address": "MidgÃ¥rden 3",
 		        "Price": "1100000",
 		        "2014-price": "1106289",
 		        "Price-reduction": "NA",
@@ -16996,7 +16996,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 37",
+		        "Address": "MidgÃ¥rden 37",
 		        "Price": "1950000",
 		        "2014-price": "2229128",
 		        "Price-reduction": "-2",
@@ -17019,7 +17019,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 45A",
+		        "Address": "MidgÃ¥rden 45A",
 		        "Price": "2300000",
 		        "2014-price": "2674237",
 		        "Price-reduction": "NA",
@@ -17042,7 +17042,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 53",
+		        "Address": "MidgÃ¥rden 53",
 		        "Price": "2237500",
 		        "2014-price": "2473691",
 		        "Price-reduction": "-5",
@@ -17065,7 +17065,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 55",
+		        "Address": "MidgÃ¥rden 55",
 		        "Price": "1785000",
 		        "2014-price": "2075441",
 		        "Price-reduction": "NA",
@@ -17088,7 +17088,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 65",
+		        "Address": "MidgÃ¥rden 65",
 		        "Price": "2195000",
 		        "2014-price": "2509198",
 		        "Price-reduction": "0",
@@ -17111,7 +17111,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 7",
+		        "Address": "MidgÃ¥rden 7",
 		        "Price": "377827",
 		        "2014-price": "541670",
 		        "Price-reduction": "NA",
@@ -17134,7 +17134,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 77",
+		        "Address": "MidgÃ¥rden 77",
 		        "Price": "1291340",
 		        "2014-price": "1778834",
 		        "Price-reduction": "NA",
@@ -17157,7 +17157,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 79",
+		        "Address": "MidgÃ¥rden 79",
 		        "Price": "2055000",
 		        "2014-price": "2271926",
 		        "Price-reduction": "-1",
@@ -17180,7 +17180,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 89",
+		        "Address": "MidgÃ¥rden 89",
 		        "Price": "2200000",
 		        "2014-price": "2212579",
 		        "Price-reduction": "NA",
@@ -17203,7 +17203,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 9",
+		        "Address": "MidgÃ¥rden 9",
 		        "Price": "943360",
 		        "2014-price": "1409902",
 		        "Price-reduction": "NA",
@@ -17226,7 +17226,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 91",
+		        "Address": "MidgÃ¥rden 91",
 		        "Price": "1872000",
 		        "2014-price": "1882703",
 		        "Price-reduction": "NA",
@@ -17249,7 +17249,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 93",
+		        "Address": "MidgÃ¥rden 93",
 		        "Price": "2080000",
 		        "2014-price": "2091893",
 		        "Price-reduction": "NA",
@@ -17272,7 +17272,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Midgården 95",
+		        "Address": "MidgÃ¥rden 95",
 		        "Price": "2018400",
 		        "2014-price": "2029940",
 		        "Price-reduction": "NA",
@@ -17893,7 +17893,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Musvågevej 17",
+		        "Address": "MusvÃ¥gevej 17",
 		        "Price": "722500",
 		        "2014-price": "770577",
 		        "Price-reduction": "NA",
@@ -17916,7 +17916,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Musvågevej 27",
+		        "Address": "MusvÃ¥gevej 27",
 		        "Price": "632400",
 		        "2014-price": "945156",
 		        "Price-reduction": "NA",
@@ -17939,7 +17939,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Musvågevej 37",
+		        "Address": "MusvÃ¥gevej 37",
 		        "Price": "710000",
 		        "2014-price": "1061133",
 		        "Price-reduction": "NA",
@@ -17962,7 +17962,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Musvågevej 7",
+		        "Address": "MusvÃ¥gevej 7",
 		        "Price": "1000000",
 		        "2014-price": "1402863",
 		        "Price-reduction": "NA",
@@ -17985,7 +17985,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Musvågevej 8",
+		        "Address": "MusvÃ¥gevej 8",
 		        "Price": "907962",
 		        "2014-price": "1301697",
 		        "Price-reduction": "NA",
@@ -18008,7 +18008,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Musvågevej 9",
+		        "Address": "MusvÃ¥gevej 9",
 		        "Price": "2200000",
 		        "2014-price": "2400509",
 		        "Price-reduction": "-8",
@@ -18077,7 +18077,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nordøstvej 1",
+		        "Address": "NordÃ¸stvej 1",
 		        "Price": "975000",
 		        "2014-price": "1176103",
 		        "Price-reduction": "NA",
@@ -18100,7 +18100,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nordøstvej 10",
+		        "Address": "NordÃ¸stvej 10",
 		        "Price": "1179213",
 		        "2014-price": "1584914",
 		        "Price-reduction": "NA",
@@ -18123,7 +18123,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nordøstvej 11",
+		        "Address": "NordÃ¸stvej 11",
 		        "Price": "1150000",
 		        "2014-price": "1165632",
 		        "Price-reduction": "-11",
@@ -18146,7 +18146,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nordøstvej 21",
+		        "Address": "NordÃ¸stvej 21",
 		        "Price": "1145000",
 		        "2014-price": "1495279",
 		        "Price-reduction": "NA",
@@ -18169,7 +18169,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nordøstvej 23",
+		        "Address": "NordÃ¸stvej 23",
 		        "Price": "1050000",
 		        "2014-price": "1371216",
 		        "Price-reduction": "NA",
@@ -18192,7 +18192,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nordøstvej 26",
+		        "Address": "NordÃ¸stvej 26",
 		        "Price": "1295000",
 		        "2014-price": "1534318",
 		        "Price-reduction": "NA",
@@ -18215,7 +18215,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nordøstvej 7",
+		        "Address": "NordÃ¸stvej 7",
 		        "Price": "245000",
 		        "2014-price": "378110",
 		        "Price-reduction": "NA",
@@ -18353,7 +18353,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 10",
+		        "Address": "NÃ¸ddevÃ¦nget 10",
 		        "Price": "1750000",
 		        "2014-price": "2073402",
 		        "Price-reduction": "NA",
@@ -18376,7 +18376,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 13",
+		        "Address": "NÃ¸ddevÃ¦nget 13",
 		        "Price": "1845000",
 		        "2014-price": "2109098",
 		        "Price-reduction": "NA",
@@ -18399,7 +18399,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 18",
+		        "Address": "NÃ¸ddevÃ¦nget 18",
 		        "Price": "1700000",
 		        "2014-price": "1723109",
 		        "Price-reduction": "-5",
@@ -18422,7 +18422,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 19",
+		        "Address": "NÃ¸ddevÃ¦nget 19",
 		        "Price": "1431000",
 		        "2014-price": "2007497",
 		        "Price-reduction": "NA",
@@ -18445,7 +18445,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 2",
+		        "Address": "NÃ¸ddevÃ¦nget 2",
 		        "Price": "808500",
 		        "2014-price": "819490",
 		        "Price-reduction": "NA",
@@ -18468,7 +18468,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 23",
+		        "Address": "NÃ¸ddevÃ¦nget 23",
 		        "Price": "1660000",
 		        "2014-price": "1660000",
 		        "Price-reduction": "-3",
@@ -18491,7 +18491,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 4",
+		        "Address": "NÃ¸ddevÃ¦nget 4",
 		        "Price": "955000",
 		        "2014-price": "1091701",
 		        "Price-reduction": "-4",
@@ -18514,7 +18514,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 6",
+		        "Address": "NÃ¸ddevÃ¦nget 6",
 		        "Price": "1070000",
 		        "2014-price": "1305621",
 		        "Price-reduction": "NA",
@@ -18537,7 +18537,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 7A",
+		        "Address": "NÃ¸ddevÃ¦nget 7A",
 		        "Price": "1995000",
 		        "2014-price": "2022119",
 		        "Price-reduction": "0",
@@ -18560,7 +18560,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 7B",
+		        "Address": "NÃ¸ddevÃ¦nget 7B",
 		        "Price": "1995000",
 		        "2014-price": "2022119",
 		        "Price-reduction": "NA",
@@ -18583,7 +18583,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøddevænget 9",
+		        "Address": "NÃ¸ddevÃ¦nget 9",
 		        "Price": "600000",
 		        "2014-price": "896732",
 		        "Price-reduction": "NA",
@@ -18606,7 +18606,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøvlingvej 250",
+		        "Address": "NÃ¸vlingvej 250",
 		        "Price": "1125000",
 		        "2014-price": "1435280",
 		        "Price-reduction": "NA",
@@ -18629,7 +18629,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøvlingvej 252",
+		        "Address": "NÃ¸vlingvej 252",
 		        "Price": "1500000",
 		        "2014-price": "1500000",
 		        "Price-reduction": "NA",
@@ -18652,7 +18652,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøvlingvej 256",
+		        "Address": "NÃ¸vlingvej 256",
 		        "Price": "743000",
 		        "2014-price": "1065200",
 		        "Price-reduction": "NA",
@@ -18675,7 +18675,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Nøvlingvej 272",
+		        "Address": "NÃ¸vlingvej 272",
 		        "Price": "2530000",
 		        "2014-price": "3303979",
 		        "Price-reduction": "NA",
@@ -20952,7 +20952,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Pumpestræde 10",
+		        "Address": "PumpestrÃ¦de 10",
 		        "Price": "2195000",
 		        "2014-price": "2207550",
 		        "Price-reduction": "0",
@@ -20975,7 +20975,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Pumpestræde 14",
+		        "Address": "PumpestrÃ¦de 14",
 		        "Price": "820000",
 		        "2014-price": "1225534",
 		        "Price-reduction": "NA",
@@ -20998,7 +20998,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Pumpestræde 16",
+		        "Address": "PumpestrÃ¦de 16",
 		        "Price": "1350000",
 		        "2014-price": "1599482",
 		        "Price-reduction": "NA",
@@ -21021,7 +21021,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Pumpestræde 3",
+		        "Address": "PumpestrÃ¦de 3",
 		        "Price": "2000000",
 		        "2014-price": "2027187",
 		        "Price-reduction": "-9",
@@ -21044,7 +21044,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Pumpestræde 5A",
+		        "Address": "PumpestrÃ¦de 5A",
 		        "Price": "1150000",
 		        "2014-price": "1226524",
 		        "Price-reduction": "-4",
@@ -21067,7 +21067,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Pumpestræde 5B",
+		        "Address": "PumpestrÃ¦de 5B",
 		        "Price": "215000",
 		        "2014-price": "274298",
 		        "Price-reduction": "NA",
@@ -21090,7 +21090,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Påskevej 12",
+		        "Address": "PÃ¥skevej 12",
 		        "Price": "915000",
 		        "2014-price": "1116489",
 		        "Price-reduction": "NA",
@@ -21159,7 +21159,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 14",
+		        "Address": "RidemandsmÃ¸llevej 14",
 		        "Price": "2950000",
 		        "2014-price": "3372271",
 		        "Price-reduction": "NA",
@@ -21182,7 +21182,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 15",
+		        "Address": "RidemandsmÃ¸llevej 15",
 		        "Price": "2310000",
 		        "2014-price": "2553844",
 		        "Price-reduction": "-7",
@@ -21205,7 +21205,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 18",
+		        "Address": "RidemandsmÃ¸llevej 18",
 		        "Price": "1200000",
 		        "2014-price": "1447512",
 		        "Price-reduction": "NA",
@@ -21228,7 +21228,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 19",
+		        "Address": "RidemandsmÃ¸llevej 19",
 		        "Price": "450940",
 		        "2014-price": "646489",
 		        "Price-reduction": "NA",
@@ -21251,7 +21251,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 23",
+		        "Address": "RidemandsmÃ¸llevej 23",
 		        "Price": "1225093",
 		        "2014-price": "1424430",
 		        "Price-reduction": "NA",
@@ -21274,7 +21274,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 25",
+		        "Address": "RidemandsmÃ¸llevej 25",
 		        "Price": "950000",
 		        "2014-price": "1212014",
 		        "Price-reduction": "NA",
@@ -21297,7 +21297,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 27",
+		        "Address": "RidemandsmÃ¸llevej 27",
 		        "Price": "750000",
 		        "2014-price": "1008033",
 		        "Price-reduction": "NA",
@@ -21320,7 +21320,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 29",
+		        "Address": "RidemandsmÃ¸llevej 29",
 		        "Price": "2200000",
 		        "2014-price": "2514914",
 		        "Price-reduction": "-2",
@@ -21343,7 +21343,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 31",
+		        "Address": "RidemandsmÃ¸llevej 31",
 		        "Price": "425000",
 		        "2014-price": "647889",
 		        "Price-reduction": "NA",
@@ -21366,7 +21366,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 33",
+		        "Address": "RidemandsmÃ¸llevej 33",
 		        "Price": "307500",
 		        "2014-price": "423584",
 		        "Price-reduction": "NA",
@@ -21389,7 +21389,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 35",
+		        "Address": "RidemandsmÃ¸llevej 35",
 		        "Price": "1150000",
 		        "2014-price": "1271394",
 		        "Price-reduction": "0",
@@ -21412,7 +21412,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 37",
+		        "Address": "RidemandsmÃ¸llevej 37",
 		        "Price": "1150000",
 		        "2014-price": "1254812",
 		        "Price-reduction": "0",
@@ -21435,7 +21435,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 40A",
+		        "Address": "RidemandsmÃ¸llevej 40A",
 		        "Price": "2025000",
 		        "2014-price": "2238759",
 		        "Price-reduction": "-3",
@@ -21458,7 +21458,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 47",
+		        "Address": "RidemandsmÃ¸llevej 47",
 		        "Price": "2025000",
 		        "2014-price": "2036578",
 		        "Price-reduction": "NA",
@@ -21481,7 +21481,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 49",
+		        "Address": "RidemandsmÃ¸llevej 49",
 		        "Price": "1325000",
 		        "2014-price": "1569862",
 		        "Price-reduction": "NA",
@@ -21504,7 +21504,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 51",
+		        "Address": "RidemandsmÃ¸llevej 51",
 		        "Price": "1750000",
 		        "2014-price": "1909496",
 		        "Price-reduction": "-8",
@@ -21527,7 +21527,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 53",
+		        "Address": "RidemandsmÃ¸llevej 53",
 		        "Price": "785000",
 		        "2014-price": "1001506",
 		        "Price-reduction": "NA",
@@ -21550,7 +21550,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 57",
+		        "Address": "RidemandsmÃ¸llevej 57",
 		        "Price": "820000",
 		        "2014-price": "953424",
 		        "Price-reduction": "NA",
@@ -21573,7 +21573,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 59",
+		        "Address": "RidemandsmÃ¸llevej 59",
 		        "Price": "1650000",
 		        "2014-price": "1712665",
 		        "Price-reduction": "-8",
@@ -21596,7 +21596,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 61",
+		        "Address": "RidemandsmÃ¸llevej 61",
 		        "Price": "671000",
 		        "2014-price": "818758",
 		        "Price-reduction": "NA",
@@ -21619,7 +21619,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 63",
+		        "Address": "RidemandsmÃ¸llevej 63",
 		        "Price": "1050000",
 		        "2014-price": "1200300",
 		        "Price-reduction": "NA",
@@ -21642,7 +21642,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 65",
+		        "Address": "RidemandsmÃ¸llevej 65",
 		        "Price": "520000",
 		        "2014-price": "792711",
 		        "Price-reduction": "NA",
@@ -21665,7 +21665,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridemandsmøllevej 69",
+		        "Address": "RidemandsmÃ¸llevej 69",
 		        "Price": "975000",
 		        "2014-price": "1273272",
 		        "Price-reduction": "NA",
@@ -21688,7 +21688,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridevænget 11",
+		        "Address": "RidevÃ¦nget 11",
 		        "Price": "595000",
 		        "2014-price": "889259",
 		        "Price-reduction": "NA",
@@ -21711,7 +21711,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridevænget 23",
+		        "Address": "RidevÃ¦nget 23",
 		        "Price": "660000",
 		        "2014-price": "822154",
 		        "Price-reduction": "NA",
@@ -21734,7 +21734,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridevænget 25",
+		        "Address": "RidevÃ¦nget 25",
 		        "Price": "930000",
 		        "2014-price": "1134792",
 		        "Price-reduction": "NA",
@@ -21757,7 +21757,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridevænget 27",
+		        "Address": "RidevÃ¦nget 27",
 		        "Price": "1008000",
 		        "2014-price": "1414086",
 		        "Price-reduction": "NA",
@@ -21780,7 +21780,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ridevænget 8",
+		        "Address": "RidevÃ¦nget 8",
 		        "Price": "1050000",
 		        "2014-price": "1056004",
 		        "Price-reduction": "-8",
@@ -22309,7 +22309,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Rævedalsvej 100",
+		        "Address": "RÃ¦vedalsvej 100",
 		        "Price": "1300000",
 		        "2014-price": "1863741",
 		        "Price-reduction": "NA",
@@ -22332,7 +22332,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Rævedalsvej 39",
+		        "Address": "RÃ¦vedalsvej 39",
 		        "Price": "834504",
 		        "2014-price": "1121610",
 		        "Price-reduction": "NA",
@@ -22355,7 +22355,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Rævedalsvej 90",
+		        "Address": "RÃ¦vedalsvej 90",
 		        "Price": "600000",
 		        "2014-price": "747412",
 		        "Price-reduction": "NA",
@@ -22539,7 +22539,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sifhøj 45",
+		        "Address": "SifhÃ¸j 45",
 		        "Price": "1480000",
 		        "2014-price": "1536208",
 		        "Price-reduction": "NA",
@@ -22562,7 +22562,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sifhøj 65",
+		        "Address": "SifhÃ¸j 65",
 		        "Price": "2865000",
 		        "2014-price": "2973808",
 		        "Price-reduction": "-4",
@@ -22585,7 +22585,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 1",
+		        "Address": "SjÃ¦llandsgÃ¥rden 1",
 		        "Price": "775000",
 		        "2014-price": "826570",
 		        "Price-reduction": "0",
@@ -22608,7 +22608,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 10",
+		        "Address": "SjÃ¦llandsgÃ¥rden 10",
 		        "Price": "575000",
 		        "2014-price": "716270",
 		        "Price-reduction": "NA",
@@ -22631,7 +22631,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 11",
+		        "Address": "SjÃ¦llandsgÃ¥rden 11",
 		        "Price": "545000",
 		        "2014-price": "695313",
 		        "Price-reduction": "NA",
@@ -22654,7 +22654,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 12",
+		        "Address": "SjÃ¦llandsgÃ¥rden 12",
 		        "Price": "800000",
 		        "2014-price": "947841",
 		        "Price-reduction": "NA",
@@ -22677,7 +22677,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 13",
+		        "Address": "SjÃ¦llandsgÃ¥rden 13",
 		        "Price": "725000",
 		        "2014-price": "903123",
 		        "Price-reduction": "NA",
@@ -22700,7 +22700,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 14",
+		        "Address": "SjÃ¦llandsgÃ¥rden 14",
 		        "Price": "490000",
 		        "2014-price": "674980",
 		        "Price-reduction": "NA",
@@ -22723,7 +22723,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 16",
+		        "Address": "SjÃ¦llandsgÃ¥rden 16",
 		        "Price": "595000",
 		        "2014-price": "799706",
 		        "Price-reduction": "NA",
@@ -22746,7 +22746,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 17",
+		        "Address": "SjÃ¦llandsgÃ¥rden 17",
 		        "Price": "538336",
 		        "2014-price": "741563",
 		        "Price-reduction": "NA",
@@ -22769,7 +22769,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 18",
+		        "Address": "SjÃ¦llandsgÃ¥rden 18",
 		        "Price": "723000",
 		        "2014-price": "971744",
 		        "Price-reduction": "NA",
@@ -22792,7 +22792,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 19",
+		        "Address": "SjÃ¦llandsgÃ¥rden 19",
 		        "Price": "570000",
 		        "2014-price": "766105",
 		        "Price-reduction": "NA",
@@ -22815,7 +22815,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 2",
+		        "Address": "SjÃ¦llandsgÃ¥rden 2",
 		        "Price": "665000",
 		        "2014-price": "868437",
 		        "Price-reduction": "NA",
@@ -22838,7 +22838,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 20",
+		        "Address": "SjÃ¦llandsgÃ¥rden 20",
 		        "Price": "545500",
 		        "2014-price": "603083",
 		        "Price-reduction": "NA",
@@ -22861,7 +22861,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 21",
+		        "Address": "SjÃ¦llandsgÃ¥rden 21",
 		        "Price": "520000",
 		        "2014-price": "716305",
 		        "Price-reduction": "NA",
@@ -22884,7 +22884,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 22",
+		        "Address": "SjÃ¦llandsgÃ¥rden 22",
 		        "Price": "795000",
 		        "2014-price": "941917",
 		        "Price-reduction": "NA",
@@ -22907,7 +22907,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 24",
+		        "Address": "SjÃ¦llandsgÃ¥rden 24",
 		        "Price": "435000",
 		        "2014-price": "636812",
 		        "Price-reduction": "NA",
@@ -22930,7 +22930,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 3",
+		        "Address": "SjÃ¦llandsgÃ¥rden 3",
 		        "Price": "745000",
 		        "2014-price": "882677",
 		        "Price-reduction": "NA",
@@ -22953,7 +22953,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 7",
+		        "Address": "SjÃ¦llandsgÃ¥rden 7",
 		        "Price": "765000",
 		        "2014-price": "906373",
 		        "Price-reduction": "NA",
@@ -22976,7 +22976,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 8",
+		        "Address": "SjÃ¦llandsgÃ¥rden 8",
 		        "Price": "1365000",
 		        "2014-price": "1365000",
 		        "Price-reduction": "NA",
@@ -22999,7 +22999,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsgården 9",
+		        "Address": "SjÃ¦llandsgÃ¥rden 9",
 		        "Price": "1225000",
 		        "2014-price": "1354311",
 		        "Price-reduction": "-2",
@@ -23022,7 +23022,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsvej 10",
+		        "Address": "SjÃ¦llandsvej 10",
 		        "Price": "532680",
 		        "2014-price": "763675",
 		        "Price-reduction": "NA",
@@ -23045,7 +23045,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsvej 4",
+		        "Address": "SjÃ¦llandsvej 4",
 		        "Price": "730000",
 		        "2014-price": "1068673",
 		        "Price-reduction": "NA",
@@ -23068,7 +23068,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sjællandsvej 4A",
+		        "Address": "SjÃ¦llandsvej 4A",
 		        "Price": "478296",
 		        "2014-price": "496461",
 		        "Price-reduction": "NA",
@@ -23367,7 +23367,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skråvej 35",
+		        "Address": "SkrÃ¥vej 35",
 		        "Price": "470000",
 		        "2014-price": "613783",
 		        "Price-reduction": "NA",
@@ -23390,7 +23390,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skråvej 41",
+		        "Address": "SkrÃ¥vej 41",
 		        "Price": "640000",
 		        "2014-price": "758273",
 		        "Price-reduction": "NA",
@@ -23413,7 +23413,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skråvej 45",
+		        "Address": "SkrÃ¥vej 45",
 		        "Price": "845000",
 		        "2014-price": "1019290",
 		        "Price-reduction": "NA",
@@ -23459,7 +23459,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 10",
+		        "Address": "SkÃ¸jtevej 10",
 		        "Price": "1100000",
 		        "2014-price": "1403385",
 		        "Price-reduction": "NA",
@@ -23482,7 +23482,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 12",
+		        "Address": "SkÃ¸jtevej 12",
 		        "Price": "2100000",
 		        "2014-price": "2179755",
 		        "Price-reduction": "-5",
@@ -23505,7 +23505,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 13",
+		        "Address": "SkÃ¸jtevej 13",
 		        "Price": "730000",
 		        "2014-price": "1112844",
 		        "Price-reduction": "NA",
@@ -23528,7 +23528,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 14",
+		        "Address": "SkÃ¸jtevej 14",
 		        "Price": "2050000",
 		        "2014-price": "2077866",
 		        "Price-reduction": "-2",
@@ -23551,7 +23551,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 16",
+		        "Address": "SkÃ¸jtevej 16",
 		        "Price": "2085000",
 		        "2014-price": "2085000",
 		        "Price-reduction": "-3",
@@ -23574,7 +23574,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 19",
+		        "Address": "SkÃ¸jtevej 19",
 		        "Price": "1065000",
 		        "2014-price": "1358732",
 		        "Price-reduction": "NA",
@@ -23597,7 +23597,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 2",
+		        "Address": "SkÃ¸jtevej 2",
 		        "Price": "1900000",
 		        "2014-price": "2100564",
 		        "Price-reduction": "-7",
@@ -23620,7 +23620,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 25",
+		        "Address": "SkÃ¸jtevej 25",
 		        "Price": "1400000",
 		        "2014-price": "1400000",
 		        "Price-reduction": "-6",
@@ -23643,7 +23643,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 29",
+		        "Address": "SkÃ¸jtevej 29",
 		        "Price": "1900000",
 		        "2014-price": "2171971",
 		        "Price-reduction": "-2",
@@ -23666,7 +23666,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 3",
+		        "Address": "SkÃ¸jtevej 3",
 		        "Price": "1615000",
 		        "2014-price": "1624234",
 		        "Price-reduction": "-5",
@@ -23689,7 +23689,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 35",
+		        "Address": "SkÃ¸jtevej 35",
 		        "Price": "1400000",
 		        "2014-price": "1786126",
 		        "Price-reduction": "NA",
@@ -23712,7 +23712,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 39",
+		        "Address": "SkÃ¸jtevej 39",
 		        "Price": "2050000",
 		        "2014-price": "2266398",
 		        "Price-reduction": "-4",
@@ -23735,7 +23735,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 41",
+		        "Address": "SkÃ¸jtevej 41",
 		        "Price": "2095000",
 		        "2014-price": "2394884",
 		        "Price-reduction": "0",
@@ -23758,7 +23758,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 47",
+		        "Address": "SkÃ¸jtevej 47",
 		        "Price": "1242000",
 		        "2014-price": "1742356",
 		        "Price-reduction": "NA",
@@ -23781,7 +23781,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 5",
+		        "Address": "SkÃ¸jtevej 5",
 		        "Price": "1750000",
 		        "2014-price": "1750000",
 		        "Price-reduction": "-3",
@@ -23804,7 +23804,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Skøjtevej 9",
+		        "Address": "SkÃ¸jtevej 9",
 		        "Price": "1259000",
 		        "2014-price": "1606238",
 		        "Price-reduction": "NA",
@@ -23827,7 +23827,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 11",
+		        "Address": "SnebÃ¦rvej 11",
 		        "Price": "1550000",
 		        "2014-price": "1608867",
 		        "Price-reduction": "-6",
@@ -23850,7 +23850,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 12",
+		        "Address": "SnebÃ¦rvej 12",
 		        "Price": "710000",
 		        "2014-price": "1095748",
 		        "Price-reduction": "NA",
@@ -23873,7 +23873,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 15",
+		        "Address": "SnebÃ¦rvej 15",
 		        "Price": "1550000",
 		        "2014-price": "1608867",
 		        "Price-reduction": "NA",
@@ -23896,7 +23896,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 18",
+		        "Address": "SnebÃ¦rvej 18",
 		        "Price": "1149148",
 		        "2014-price": "1582963",
 		        "Price-reduction": "NA",
@@ -23919,7 +23919,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 2",
+		        "Address": "SnebÃ¦rvej 2",
 		        "Price": "1940000",
 		        "2014-price": "2116812",
 		        "Price-reduction": "-11",
@@ -23942,7 +23942,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 20",
+		        "Address": "SnebÃ¦rvej 20",
 		        "Price": "624648",
 		        "2014-price": "964024",
 		        "Price-reduction": "NA",
@@ -23965,7 +23965,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 22",
+		        "Address": "SnebÃ¦rvej 22",
 		        "Price": "653000",
 		        "2014-price": "975943",
 		        "Price-reduction": "NA",
@@ -23988,7 +23988,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 27",
+		        "Address": "SnebÃ¦rvej 27",
 		        "Price": "606230",
 		        "2014-price": "906043",
 		        "Price-reduction": "NA",
@@ -24011,7 +24011,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 28",
+		        "Address": "SnebÃ¦rvej 28",
 		        "Price": "820480",
 		        "2014-price": "1176279",
 		        "Price-reduction": "NA",
@@ -24034,7 +24034,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 30",
+		        "Address": "SnebÃ¦rvej 30",
 		        "Price": "825000",
 		        "2014-price": "1207746",
 		        "Price-reduction": "NA",
@@ -24057,7 +24057,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Snebærvej 4",
+		        "Address": "SnebÃ¦rvej 4",
 		        "Price": "1330000",
 		        "2014-price": "1832088",
 		        "Price-reduction": "NA",
@@ -24954,7 +24954,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 1",
+		        "Address": "SolskrÃ¦nten 1",
 		        "Price": "1975000",
 		        "2014-price": "2183481",
 		        "Price-reduction": "-8",
@@ -24977,7 +24977,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 10",
+		        "Address": "SolskrÃ¦nten 10",
 		        "Price": "495000",
 		        "2014-price": "754600",
 		        "Price-reduction": "NA",
@@ -25000,7 +25000,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 12",
+		        "Address": "SolskrÃ¦nten 12",
 		        "Price": "965000",
 		        "2014-price": "1202088",
 		        "Price-reduction": "NA",
@@ -25023,7 +25023,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 16",
+		        "Address": "SolskrÃ¦nten 16",
 		        "Price": "826700",
 		        "2014-price": "1138788",
 		        "Price-reduction": "NA",
@@ -25046,7 +25046,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 18",
+		        "Address": "SolskrÃ¦nten 18",
 		        "Price": "523005",
 		        "2014-price": "749804",
 		        "Price-reduction": "NA",
@@ -25069,7 +25069,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 23",
+		        "Address": "SolskrÃ¦nten 23",
 		        "Price": "797423",
 		        "2014-price": "827708",
 		        "Price-reduction": "-56",
@@ -25092,7 +25092,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 2A",
+		        "Address": "SolskrÃ¦nten 2A",
 		        "Price": "625000",
 		        "2014-price": "714464",
 		        "Price-reduction": "-10",
@@ -25115,7 +25115,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 8B",
+		        "Address": "SolskrÃ¦nten 8B",
 		        "Price": "2076000",
 		        "2014-price": "2373164",
 		        "Price-reduction": "NA",
@@ -25138,7 +25138,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Solskrænten 9",
+		        "Address": "SolskrÃ¦nten 9",
 		        "Price": "1860000",
 		        "2014-price": "1860000",
 		        "Price-reduction": "-7",
@@ -25161,7 +25161,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sportvænget 1",
+		        "Address": "SportvÃ¦nget 1",
 		        "Price": "1435000",
 		        "2014-price": "1668492",
 		        "Price-reduction": "NA",
@@ -25184,7 +25184,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Sportvænget 14",
+		        "Address": "SportvÃ¦nget 14",
 		        "Price": "2145000",
 		        "2014-price": "2452041",
 		        "Price-reduction": "NA",
@@ -25667,7 +25667,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Stubmøllevej 12",
+		        "Address": "StubmÃ¸llevej 12",
 		        "Price": "883000",
 		        "2014-price": "1346084",
 		        "Price-reduction": "NA",
@@ -25690,7 +25690,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Stubmøllevej 5",
+		        "Address": "StubmÃ¸llevej 5",
 		        "Price": "2250000",
 		        "2014-price": "2487510",
 		        "Price-reduction": "-6",
@@ -26288,7 +26288,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 13",
+		        "Address": "SvenstruphÃ¸j 13",
 		        "Price": "3745000",
 		        "2014-price": "4140322",
 		        "Price-reduction": "-4",
@@ -26311,7 +26311,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 21",
+		        "Address": "SvenstruphÃ¸j 21",
 		        "Price": "2575000",
 		        "2014-price": "3050864",
 		        "Price-reduction": "NA",
@@ -26334,7 +26334,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 23",
+		        "Address": "SvenstruphÃ¸j 23",
 		        "Price": "2270000",
 		        "2014-price": "2300857",
 		        "Price-reduction": "-3",
@@ -26357,7 +26357,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 26",
+		        "Address": "SvenstruphÃ¸j 26",
 		        "Price": "3650000",
 		        "2014-price": "3670869",
 		        "Price-reduction": "-9",
@@ -26380,7 +26380,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 27",
+		        "Address": "SvenstruphÃ¸j 27",
 		        "Price": "2750000",
 		        "2014-price": "2854441",
 		        "Price-reduction": "-5",
@@ -26403,7 +26403,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 28",
+		        "Address": "SvenstruphÃ¸j 28",
 		        "Price": "2930000",
 		        "2014-price": "2930000",
 		        "Price-reduction": "-5",
@@ -26426,7 +26426,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 32",
+		        "Address": "SvenstruphÃ¸j 32",
 		        "Price": "1895000",
 		        "2014-price": "1905835",
 		        "Price-reduction": "-12",
@@ -26449,7 +26449,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 33",
+		        "Address": "SvenstruphÃ¸j 33",
 		        "Price": "2095000",
 		        "2014-price": "2482159",
 		        "Price-reduction": "NA",
@@ -26472,7 +26472,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 36",
+		        "Address": "SvenstruphÃ¸j 36",
 		        "Price": "2575000",
 		        "2014-price": "3050864",
 		        "Price-reduction": "NA",
@@ -26495,7 +26495,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 38",
+		        "Address": "SvenstruphÃ¸j 38",
 		        "Price": "2485000",
 		        "2014-price": "2518780",
 		        "Price-reduction": "0",
@@ -26518,7 +26518,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 4",
+		        "Address": "SvenstruphÃ¸j 4",
 		        "Price": "2645000",
 		        "2014-price": "3023613",
 		        "Price-reduction": "-2",
@@ -26541,7 +26541,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 41",
+		        "Address": "SvenstruphÃ¸j 41",
 		        "Price": "2400000",
 		        "2014-price": "2743543",
 		        "Price-reduction": "-4",
@@ -26564,7 +26564,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 45",
+		        "Address": "SvenstruphÃ¸j 45",
 		        "Price": "2890000",
 		        "2014-price": "3153396",
 		        "Price-reduction": "NA",
@@ -26587,7 +26587,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 53",
+		        "Address": "SvenstruphÃ¸j 53",
 		        "Price": "2850000",
 		        "2014-price": "3039646",
 		        "Price-reduction": "-5",
@@ -26610,7 +26610,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 57",
+		        "Address": "SvenstruphÃ¸j 57",
 		        "Price": "2700000",
 		        "2014-price": "3086486",
 		        "Price-reduction": "NA",
@@ -26633,7 +26633,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 63",
+		        "Address": "SvenstruphÃ¸j 63",
 		        "Price": "2160000",
 		        "2014-price": "2605521",
 		        "Price-reduction": "NA",
@@ -26656,7 +26656,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 65",
+		        "Address": "SvenstruphÃ¸j 65",
 		        "Price": "1855663",
 		        "2014-price": "2238412",
 		        "Price-reduction": "NA",
@@ -26679,7 +26679,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Svenstruphøj 8",
+		        "Address": "SvenstruphÃ¸j 8",
 		        "Price": "2545000",
 		        "2014-price": "2959102",
 		        "Price-reduction": "NA",
@@ -28427,7 +28427,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tranebærvej 4",
+		        "Address": "TranebÃ¦rvej 4",
 		        "Price": "1850000",
 		        "2014-price": "1850000",
 		        "Price-reduction": "0",
@@ -28450,7 +28450,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tranebærvej 5",
+		        "Address": "TranebÃ¦rvej 5",
 		        "Price": "1787500",
 		        "2014-price": "1811798",
 		        "Price-reduction": "-3",
@@ -28473,7 +28473,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tranebærvej 6",
+		        "Address": "TranebÃ¦rvej 6",
 		        "Price": "1670000",
 		        "2014-price": "1679548",
 		        "Price-reduction": "-1",
@@ -29094,7 +29094,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tværvej 1",
+		        "Address": "TvÃ¦rvej 1",
 		        "Price": "1195000",
 		        "2014-price": "1441481",
 		        "Price-reduction": "NA",
@@ -29117,7 +29117,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tværvej 3",
+		        "Address": "TvÃ¦rvej 3",
 		        "Price": "1250000",
 		        "2014-price": "1266992",
 		        "Price-reduction": "-6",
@@ -29140,7 +29140,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tværvej 4",
+		        "Address": "TvÃ¦rvej 4",
 		        "Price": "1050000",
 		        "2014-price": "1064273",
 		        "Price-reduction": "NA",
@@ -29163,7 +29163,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tværvej 8",
+		        "Address": "TvÃ¦rvej 8",
 		        "Price": "635000",
 		        "2014-price": "949041",
 		        "Price-reduction": "NA",
@@ -29186,7 +29186,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tårnfalkevej 10",
+		        "Address": "TÃ¥rnfalkevej 10",
 		        "Price": "1066000",
 		        "2014-price": "1560555",
 		        "Price-reduction": "NA",
@@ -29209,7 +29209,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tårnfalkevej 12",
+		        "Address": "TÃ¥rnfalkevej 12",
 		        "Price": "1675000",
 		        "2014-price": "1914764",
 		        "Price-reduction": "NA",
@@ -29232,7 +29232,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tårnfalkevej 14",
+		        "Address": "TÃ¥rnfalkevej 14",
 		        "Price": "786200",
 		        "2014-price": "1150946",
 		        "Price-reduction": "NA",
@@ -29255,7 +29255,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Tårnfalkevej 6",
+		        "Address": "TÃ¥rnfalkevej 6",
 		        "Price": "1250000",
 		        "2014-price": "1525258",
 		        "Price-reduction": "NA",
@@ -29278,7 +29278,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ved Vester Mølle 11",
+		        "Address": "Ved Vester MÃ¸lle 11",
 		        "Price": "3250000",
 		        "2014-price": "3715214",
 		        "Price-reduction": "0",
@@ -29301,7 +29301,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ved Vester Mølle 12",
+		        "Address": "Ved Vester MÃ¸lle 12",
 		        "Price": "3800000",
 		        "2014-price": "4418305",
 		        "Price-reduction": "NA",
@@ -29324,7 +29324,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ved Vester Mølle 14",
+		        "Address": "Ved Vester MÃ¸lle 14",
 		        "Price": "1850000",
 		        "2014-price": "2231581",
 		        "Price-reduction": "NA",
@@ -29347,7 +29347,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ved Vester Mølle 6",
+		        "Address": "Ved Vester MÃ¸lle 6",
 		        "Price": "1712000",
 		        "2014-price": "2184177",
 		        "Price-reduction": "NA",
@@ -29370,7 +29370,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Vejrmøllen 11",
+		        "Address": "VejrmÃ¸llen 11",
 		        "Price": "2450000",
 		        "2014-price": "2848644",
 		        "Price-reduction": "NA",
@@ -29393,7 +29393,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Vejrmøllen 5",
+		        "Address": "VejrmÃ¸llen 5",
 		        "Price": "1580000",
 		        "2014-price": "2123589",
 		        "Price-reduction": "NA",
@@ -29416,7 +29416,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Vestermøllevej 2",
+		        "Address": "VestermÃ¸llevej 2",
 		        "Price": "785000",
 		        "2014-price": "789488",
 		        "Price-reduction": "-9",
@@ -29439,7 +29439,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Vestermøllevej 3",
+		        "Address": "VestermÃ¸llevej 3",
 		        "Price": "1074712",
 		        "2014-price": "1371122",
 		        "Price-reduction": "NA",
@@ -29462,7 +29462,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Vestermøllevej 5",
+		        "Address": "VestermÃ¸llevej 5",
 		        "Price": "1295000",
 		        "2014-price": "1816708",
 		        "Price-reduction": "NA",
@@ -29485,7 +29485,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Vestermøllevej 6",
+		        "Address": "VestermÃ¸llevej 6",
 		        "Price": "1600000",
 		        "2014-price": "1621749",
 		        "Price-reduction": "NA",
@@ -29508,7 +29508,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Vestermøllevej 8",
+		        "Address": "VestermÃ¸llevej 8",
 		        "Price": "2600000",
 		        "2014-price": "2600000",
 		        "Price-reduction": "-2",
@@ -29761,7 +29761,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 16",
+		        "Address": "VÃ¥sevej 16",
 		        "Price": "400000",
 		        "2014-price": "551004",
 		        "Price-reduction": "NA",
@@ -29784,7 +29784,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 24",
+		        "Address": "VÃ¥sevej 24",
 		        "Price": "643340",
 		        "2014-price": "711251",
 		        "Price-reduction": "NA",
@@ -29807,7 +29807,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 3",
+		        "Address": "VÃ¥sevej 3",
 		        "Price": "726000",
 		        "2014-price": "948098",
 		        "Price-reduction": "NA",
@@ -29830,7 +29830,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 30",
+		        "Address": "VÃ¥sevej 30",
 		        "Price": "690170",
 		        "2014-price": "788963",
 		        "Price-reduction": "NA",
@@ -29853,7 +29853,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 47B",
+		        "Address": "VÃ¥sevej 47B",
 		        "Price": "2050000",
 		        "2014-price": "2127856",
 		        "Price-reduction": "-11",
@@ -29876,7 +29876,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 49",
+		        "Address": "VÃ¥sevej 49",
 		        "Price": "1125000",
 		        "2014-price": "1469160",
 		        "Price-reduction": "NA",
@@ -29899,7 +29899,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 5",
+		        "Address": "VÃ¥sevej 5",
 		        "Price": "310000",
 		        "2014-price": "453820",
 		        "Price-reduction": "NA",
@@ -29922,7 +29922,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Våsevej 59",
+		        "Address": "VÃ¥sevej 59",
 		        "Price": "1790000",
 		        "2014-price": "2046226",
 		        "Price-reduction": "NA",
@@ -30267,7 +30267,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 11",
+		        "Address": "Ã†blehaven 11",
 		        "Price": "850000",
 		        "2014-price": "854860",
 		        "Price-reduction": "-8",
@@ -30290,7 +30290,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 12",
+		        "Address": "Ã†blehaven 12",
 		        "Price": "985000",
 		        "2014-price": "1227002",
 		        "Price-reduction": "NA",
@@ -30313,7 +30313,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 15",
+		        "Address": "Ã†blehaven 15",
 		        "Price": "477000",
 		        "2014-price": "712902",
 		        "Price-reduction": "NA",
@@ -30336,7 +30336,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 21",
+		        "Address": "Ã†blehaven 21",
 		        "Price": "680000",
 		        "2014-price": "913950",
 		        "Price-reduction": "NA",
@@ -30359,7 +30359,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 4",
+		        "Address": "Ã†blehaven 4",
 		        "Price": "925000",
 		        "2014-price": "1057407",
 		        "Price-reduction": "NA",
@@ -30382,7 +30382,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 6",
+		        "Address": "Ã†blehaven 6",
 		        "Price": "1100000",
 		        "2014-price": "1141776",
 		        "Price-reduction": "-2",
@@ -30405,7 +30405,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 7",
+		        "Address": "Ã†blehaven 7",
 		        "Price": "466000",
 		        "2014-price": "682194",
 		        "Price-reduction": "NA",
@@ -30428,7 +30428,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Æblehaven 8",
+		        "Address": "Ã†blehaven 8",
 		        "Price": "705000",
 		        "2014-price": "878210",
 		        "Price-reduction": "NA",
@@ -30451,7 +30451,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ærenprisvej 10",
+		        "Address": "Ã†renprisvej 10",
 		        "Price": "1560000",
 		        "2014-price": "1560000",
 		        "Price-reduction": "-2",
@@ -30474,7 +30474,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ærenprisvej 5",
+		        "Address": "Ã†renprisvej 5",
 		        "Price": "1765000",
 		        "2014-price": "2017647",
 		        "Price-reduction": "-2",
@@ -30497,7 +30497,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ærenprisvej 6",
+		        "Address": "Ã†renprisvej 6",
 		        "Price": "1765000",
 		        "2014-price": "2017647",
 		        "Price-reduction": "0",
@@ -30520,7 +30520,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ærenprisvej 7",
+		        "Address": "Ã†renprisvej 7",
 		        "Price": "1040278",
 		        "2014-price": "1398179",
 		        "Price-reduction": "NA",
@@ -30543,7 +30543,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ærenprisvej 8",
+		        "Address": "Ã†renprisvej 8",
 		        "Price": "883158",
 		        "2014-price": "1238950",
 		        "Price-reduction": "NA",
@@ -30566,7 +30566,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 13",
+		        "Address": "Ã˜rnevej 13",
 		        "Price": "1925000",
 		        "2014-price": "1925000",
 		        "Price-reduction": "-8",
@@ -30589,7 +30589,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 2",
+		        "Address": "Ã˜rnevej 2",
 		        "Price": "2550000",
 		        "2014-price": "2819178",
 		        "Price-reduction": "-2",
@@ -30612,7 +30612,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 22",
+		        "Address": "Ã˜rnevej 22",
 		        "Price": "765000",
 		        "2014-price": "1180630",
 		        "Price-reduction": "NA",
@@ -30635,7 +30635,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 24",
+		        "Address": "Ã˜rnevej 24",
 		        "Price": "1825000",
 		        "2014-price": "1849808",
 		        "Price-reduction": "-4",
@@ -30658,7 +30658,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 27",
+		        "Address": "Ã˜rnevej 27",
 		        "Price": "645000",
 		        "2014-price": "963987",
 		        "Price-reduction": "NA",
@@ -30681,7 +30681,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 28",
+		        "Address": "Ã˜rnevej 28",
 		        "Price": "2000000",
 		        "2014-price": "2325424",
 		        "Price-reduction": "NA",
@@ -30704,7 +30704,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 40",
+		        "Address": "Ã˜rnevej 40",
 		        "Price": "738800",
 		        "2014-price": "1059178",
 		        "Price-reduction": "NA",
@@ -30727,7 +30727,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 41",
+		        "Address": "Ã˜rnevej 41",
 		        "Price": "2498000",
 		        "2014-price": "2531956",
 		        "Price-reduction": "0",
@@ -30750,7 +30750,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 42",
+		        "Address": "Ã˜rnevej 42",
 		        "Price": "2225000",
 		        "2014-price": "2543493",
 		        "Price-reduction": "NA",
@@ -30773,7 +30773,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 46",
+		        "Address": "Ã˜rnevej 46",
 		        "Price": "1400000",
 		        "2014-price": "1881661",
 		        "Price-reduction": "NA",
@@ -30796,7 +30796,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 47",
+		        "Address": "Ã˜rnevej 47",
 		        "Price": "640000",
 		        "2014-price": "975644",
 		        "Price-reduction": "NA",
@@ -30819,7 +30819,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 55",
+		        "Address": "Ã˜rnevej 55",
 		        "Price": "1475000",
 		        "2014-price": "1609432",
 		        "Price-reduction": "-13",
@@ -30842,7 +30842,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 58",
+		        "Address": "Ã˜rnevej 58",
 		        "Price": "2231600",
 		        "2014-price": "2244359",
 		        "Price-reduction": "-3",
@@ -30865,7 +30865,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 59",
+		        "Address": "Ã˜rnevej 59",
 		        "Price": "1345000",
 		        "2014-price": "1352690",
 		        "Price-reduction": "0",
@@ -30888,7 +30888,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 62",
+		        "Address": "Ã˜rnevej 62",
 		        "Price": "1048218",
 		        "2014-price": "1443931",
 		        "Price-reduction": "NA",
@@ -30911,7 +30911,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 68",
+		        "Address": "Ã˜rnevej 68",
 		        "Price": "1875000",
 		        "2014-price": "1875000",
 		        "Price-reduction": "-6",
@@ -30934,7 +30934,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 8",
+		        "Address": "Ã˜rnevej 8",
 		        "Price": "2270000",
 		        "2014-price": "2282979",
 		        "Price-reduction": "-1",
@@ -30957,7 +30957,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Ørnevej 9",
+		        "Address": "Ã˜rnevej 9",
 		        "Price": "1895000",
 		        "2014-price": "2166256",
 		        "Price-reduction": "NA",
@@ -30980,7 +30980,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Østerkæret 15",
+		        "Address": "Ã˜sterkÃ¦ret 15",
 		        "Price": "1085000",
 		        "2014-price": "1308792",
 		        "Price-reduction": "NA",
@@ -31003,7 +31003,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Østermøllevej 15",
+		        "Address": "Ã˜stermÃ¸llevej 15",
 		        "Price": "1000000",
 		        "2014-price": "1005718",
 		        "Price-reduction": "-7",
@@ -31026,7 +31026,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Østermøllevej 17",
+		        "Address": "Ã˜stermÃ¸llevej 17",
 		        "Price": "1495000",
 		        "2014-price": "1652812",
 		        "Price-reduction": "0",
@@ -31049,7 +31049,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Østermøllevej 19",
+		        "Address": "Ã˜stermÃ¸llevej 19",
 		        "Price": "1350000",
 		        "2014-price": "1368351",
 		        "Price-reduction": "-3",
@@ -31072,7 +31072,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Østermøllevej 21",
+		        "Address": "Ã˜stermÃ¸llevej 21",
 		        "Price": "449669",
 		        "2014-price": "672054",
 		        "Price-reduction": "NA",
@@ -31095,7 +31095,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Østermøllevej 23",
+		        "Address": "Ã˜stermÃ¸llevej 23",
 		        "Price": "1250000",
 		        "2014-price": "1428929",
 		        "Price-reduction": "NA",
@@ -31118,7 +31118,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		    {
 		      "type": "Feature",
 		      "properties": {
-		        "Address": "Østermøllevej 25",
+		        "Address": "Ã˜stermÃ¸llevej 25",
 		        "Price": "895000",
 		        "2014-price": "1202919",
 		        "Price-reduction": "NA",
@@ -31170,12 +31170,12 @@ A bit of data wrangling and the map above magically appears. Each sale is adjust
 <br>
 <br>
 
-Zooming in on Svenstrup/Godthåb, a visual inspection reveals clear clusters of red dots centered around <i>Svenstruphøj, Asgården, Midgården, Lunden and Birkagervænget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/Godthåb measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/Godthåb is located in exactly the five neighborhoods mentioned above - i.e. it's the newly established neighborhoods that are raking in the highest prices <i> Well, proximity to Svanemølleparken and having lakeview also seems to be correlated with higher prices</i>. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or Godthåb, which might suggest that out of the five cities in 9230 Svenstrup and Godthåb are experiencing the highest growth. <i>(building plots are removed from the map above)</i>
+Zooming in on Svenstrup/GodthÃ¥b, a visual inspection reveals clear clusters of red dots centered around <i>SvenstruphÃ¸j, AsgÃ¥rden, MidgÃ¥rden, Lunden and BirkagervÃ¦nget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/GodthÃ¥b measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/GodthÃ¥b is located in exactly the five neighborhoods mentioned above - i.e. it's the newly established neighborhoods that are raking in the highest prices <i> Well, proximity to SvanemÃ¸lleparken and having lakeview also seems to be correlated with higher prices</i>. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or GodthÃ¥b, which might suggest that out of the five cities in 9230 Svenstrup and GodthÃ¥b are experiencing the highest growth. <i>(building plots are removed from the map above)</i>
 
 <br>
 <br>
 
-The boxplot below illustrates 2014-prices pr. squaremeter for each city. The red diamond marks the mean price in each city. Both median and mean price in Svenstrup and Godthåb appears to be greater than the 3 other cities and furthermore, Svenstrup holds a small price advantage over Godthåb in 2014-prices.    
+The boxplot below illustrates 2014-prices pr. squaremeter for each city. The red diamond marks the mean price in each city. Both median and mean price in Svenstrup and GodthÃ¥b appears to be greater than the 3 other cities and furthermore, Svenstrup holds a small price advantage over GodthÃ¥b in 2014-prices.    
 
 <img src="https://raw.githubusercontent.com/madsboending/madsboending.github.io/master/assets/img/boxplot2.png" alt="boxplot">
 
@@ -31186,10 +31186,10 @@ The boxplot below illustrates 2014-prices pr. squaremeter for each city. The red
 On another note, one migth be curios of where the most expensive homes are located. Gultentorpvej 81 holds the highest pricetag in the data with a price of 18,5 mio.kr. but it's actually a huge farm and perhaps more a commercial building than a privat residens. If I do my best at weeding out these types of commercial sales the top-5 most expensive homes in 9230 is <i>(in unadjusted prices)</i>:
 
 <ul style="list-style-type:decimal">
-  Dall Møllevej 15 - 5,5 mio.kr. (Sold in 1992)
+  Dall MÃ¸llevej 15 - 5,5 mio.kr. (Sold in 1992)
   Svenstrup Skolevej 18 - 4 mio.kr. (Sold in 2010)
-  Ved Vester Mølle 12 - 3,8 mio.kr. (Sold in 2006)
-  Svenstruphøj 13 - 3,7 mio.kr. (Sold in 2008)
+  Ved Vester MÃ¸lle 12 - 3,8 mio.kr. (Sold in 2006)
+  SvenstruphÃ¸j 13 - 3,7 mio.kr. (Sold in 2008)
   Kirkedalen 63 - 3,6 mio.kr. (Sold in 2012)
 </ul>
 
