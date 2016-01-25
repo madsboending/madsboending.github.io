@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "Where NOT to park in Copenhagen"
+date:   2016-01-25
+---
+<meta charset="UTF-8">
+
+Pretty much every major danish city now has their own open data portal, but so far the majority of the published data is kinda boring - some of the data is even being published solely as pdf?!? But I guess its a start! 
+
+<br>
+<br>
+
+A while back I randomly stumbled upon a dataset that I actually did find pretty interesting but strangely it isn't a part of any of the open data portals. The dataset contains parking tickets issued by the municipality of Copenhagen in 2013 and can be found <a href="https://www.google.com/fusiontables/DataSource?docid=18JRK4EbbQWVA9hRdMmwMpF281qFnkFPh11cVigI#rows:id=1">here.</a> in a public Google Fusion table. I was pretty suspicious of why and how the data ended up in a fusion table, so i emailed Center for Parking in Copenhagen and although they had no clue how the data got there, they did crosscheck it and it seems to be legit. That's good enough for me to play around with it! (with caution)
+
+<br>
+<br>
+I wanted to map the data, so I needed to pull all addresses in Copenhagen and their corresponding latitude and longitude coordinates from <a href="https://www.dawa.aws.dk">www.dawa.aws.dk</a>. When that was done I could join the addresses to the parking data and be ready to map the data using the ggmap package. The result is shown below
+
+<br>
+<br>
+
+<img src="https://raw.githubusercontent.com/madsboending/madsboending.github.io/master/assets/img/cphparking.png" alt="map">
+
+<br>
+<br>
+
+Not surprisingly it shows that the largest concentration of parking tickets is centered around <i>indre by</i> but also <i>N�rrebro</i> and <i>Amager</i> sees a fair amount of parking tickets. Is also clear that Frederiksberg is an independent municipality with its own parking control which is why it doesn't shows up on the map.  
+
+<iframe src="https://madsboending.shinyapps.io/parkingviolations/" style="border: none; width: 800px; height: 500px"></iframe>
+
+<br>
+<br>
+
+Zooming in on Svenstrup/Godthåb, a visual inspection reveals clear clusters of red dots centered around <i>Svenstruphøj, Asgården, Midgården, Lunden and Birkagervænget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/Godthåb measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/Godthåb is located in exactly the five neighborhoods mentioned above - i.e. it's the newly established neighborhoods that are raking in the highest prices <i> Well, proximity to Svanemølleparken and having lakeview also seems to be correlated with higher prices</i>. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or Godthåb, which might suggest that out of the five cities in 9230 Svenstrup and Godthåb are experiencing the highest growth. <i>(building plots are removed from the map above)</i>
+
+<br>
+<br>
+
+The boxplot below illustrates 2014-prices pr. squaremeter for each city. The red diamond marks the mean price in each city. Both median and mean price in Svenstrup and Godthåb appears to be greater than the 3 other cities and furthermore, Svenstrup holds a small price advantage over Godthåb in 2014-prices.    
+
+<br>
+<br>
+
+On another note, one migth be curios of where the most expensive homes are located. Gultentorpvej 81 holds the highest pricetag in the data with a price of 18,5 mio.kr. but it's actually a huge farm and perhaps more a commercial building than a privat residens. If I do my best at weeding out these types of commercial sales the top-5 most expensive homes in 9230 is <i>(in unadjusted prices)</i>:
+
+<br>
+<br>
+
+
+<br>
+<br>
+
+Well, I don't know usefull the information is, but it's been an fun exercise...
+
+<br>
+<br>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'madsboending';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
