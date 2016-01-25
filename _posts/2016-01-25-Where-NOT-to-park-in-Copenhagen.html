@@ -3,7 +3,7 @@ layout: post
 title:  "Where NOT to park in Copenhagen"
 date:   2016-01-25
 ---
-<meta charset="WINDOWS-1252">
+<meta charset="UTF-8">
 
 Pretty much every major danish city now has their own open data portal, but so far the majority of the published data is kinda boring - some of the data is even being published solely as pdf?!? But I guess its a start! 
 
@@ -27,36 +27,6 @@ I wanted to map the data, so I needed to pull all addresses in Copenhagen and th
 Not unsurprisingly it shows that the largest concentration of parking tickets is centered around <i>indre by</i> but also <i>N�rrebro</i> and <i>Amager</i> sees a fair amount of parking tickets. Is also clear that Frederiksberg is an independent municipality with its own parking control which is why it doesn't shows up on the map.  
 
 <iframe src="https://madsboending.shinyapps.io/parkingviolations/" style="border: none; width: 800px; height: 500px"></iframe>
-
-
-<br>
-&nbsp;
-<ul style="list-style-type:square">
-  <li>Years 1992 till 2014</li>
-  <li>Zipcode 9230</li>
-  <li>Housetype: Country house(landejendom), Villa, Apartments (ejerlejlighed), townhouse (rækkehus) </li>
-  <li>Ordinary free sale</li>
-</ul>
-
-
-
-
-I scraped and downloaded the search results using import.io's web crawler and after a bit of data cleaning I ended up with a dataset of 1565 observations/house sales within the specified period and criteria. Note that there is a discrepancy between the number of search results returned by Boliga and the number of sales extracted by the web crawler and the 1565 extracted observations will roughly represent about 85% of the actual number of sales in the period (I didn't bother tweaking the scraper or trying other tools to see if it would increase performance). The dataset contains variables <i>Address, Price, Date of sale, Type of sale, Price pr. sq.meter, Number of rooms, Sq.meter size, Housing type, Year of construction, Price reduction in percent. </i> Moreover, the data only contains the latest sale e.g. if Jættestuen 17 were sold in both 1998 and 2006 then only the 2006 sale is included in the data
-
-<br>
-<br>
-
-With the sales data secured, the next step is to collect latitude and longitude coordinates for each address in the sales data in order to plot them on a map. The Danish Ministry of Housing, Urban and Rural Affairs <i>(Ministeriet for by, Bolig og Lansddistrikter)</i> maintains a database of all addresses in Denmark where each address is assigned with corresponding latitude and longitude coordinates. The adresses for each of the 98 municipalties and 5 regions can be found <a href="https://www.google.com/fusiontables/DataSource?docid=18JRK4EbbQWVA9hRdMmwMpF281qFnkFPh11cVigI#rows:id=1">here.</a> By merging the addresses and the sales dataset we are able to map each sale based on latitude and longitude coordinates using R and Christian Grauls <a href="https://github.com/chgrl" class="user-mention">@chgrl</a> LeafletR package.
-
-<br>
-<br>
-
-
-
-<br>
-<br>
-
-A bit of data wrangling and the map above magically appears. Each sale is adjusted for inflation and calculated in 2014 prices. Note that the calculated 2014-price for a given house sold in e.g. 1995 isn't an prediction of the present value of that house. Obviously, a lot of other factors affects housing prices,  such as home improvements for example. This means that the calculated 2014-prices solely illustrates what a given home sold in 1995 would cost in 2014-prices keeping all other things equal. Every sale is categorized into percentiles based on the 2014-price e.g. 90-100% represents the top 10% most expensive sales in 2014-prices and 25-75% represents the middle 50% of all sales based on 2014-prices. <i>(Mapping the prices pr. squaremeter results in very similar map and is therefore left out.You can click each datapoint to see the price pr. squaremeter for each sale.) </i>
 
 <br>
 <br>
