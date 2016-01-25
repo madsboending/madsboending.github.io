@@ -14,7 +14,7 @@ A while back I randomly stumbled upon a dataset that I actually did find pretty 
 
 <br>
 <br>
-I wanted to map the data, so I needed to pull all addresses in Copenhagen and their corresponding latitude and longitude coordinates from <a href="https://www.dawa.aws.dk">www.dawa.aws.dk</a>. When that was done I could join the addresses to the parking data and be ready to map the data using the ggmap package. The result is shown below
+I wanted to map the data, so I needed to pull all addresses in Copenhagen and their corresponding latitude and longitude coordinates from <a href="http://dawa.aws.dk/">dawa.aws.dk</a>. When that was done I could join the addresses to the parking data and be ready to map the data using the ggmap package. The result is shown below
 
 <br>
 <br>
@@ -24,7 +24,12 @@ I wanted to map the data, so I needed to pull all addresses in Copenhagen and th
 <br>
 <br>
 
-Not surprisingly it shows that the largest concentration of parking tickets is centered around <i>indre by</i> but also <i>Nørrebro</i> and <i>Amager</i> sees a fair amount of parking tickets. Is also clear that Frederiksberg is an independent municipality with its own parking control which is why it doesn't shows up on the map.  
+Not surprisingly it shows that the largest concentration of parking tickets is centered around <i>indre by</i> but also <i>NÃ¸rrebro</i> and <i>Amager</i> sees a fair amount of parking tickets. Is also clear that Frederiksberg is an independent municipality with its own parking control which is why it doesn't shows up on the map.  
+
+<br>
+<br>
+
+It may be more interesting to investigate different types of parkings violations which is why I created the simple shiny app below (encoding danish characters is btw. mindblowingly annoying). The app lets you select among the different types of violations and returns a barchart of the top10 streets with most violations.
 
 <br>
 <br>
@@ -34,26 +39,11 @@ Not surprisingly it shows that the largest concentration of parking tickets is c
 <br>
 <br>
 
-Zooming in on Svenstrup/GodthÃ¥b, a visual inspection reveals clear clusters of red dots centered around <i>SvenstruphÃ¸j, AsgÃ¥rden, MidgÃ¥rden, Lunden and BirkagervÃ¦nget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/GodthÃ¥b measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/GodthÃ¥b is located in exactly the five neighborhoods mentioned above - i.e. it's the newly established neighborhoods that are raking in the highest prices <i> Well, proximity to SvanemÃ¸lleparken and having lakeview also seems to be correlated with higher prices</i>. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or GodthÃ¥b, which might suggest that out of the five cities in 9230 Svenstrup and GodthÃ¥b are experiencing the highest growth. <i>(building plots are removed from the map above)</i>
+As you can see Dronningens TvÂ¦rgade is by far the highest grossing street in 2013
 
 <br>
 <br>
-
-The boxplot below illustrates 2014-prices pr. squaremeter for each city. The red diamond marks the mean price in each city. Both median and mean price in Svenstrup and GodthÃ¥b appears to be greater than the 3 other cities and furthermore, Svenstrup holds a small price advantage over GodthÃ¥b in 2014-prices.    
-
-<br>
-<br>
-
-On another note, one migth be curios of where the most expensive homes are located. Gultentorpvej 81 holds the highest pricetag in the data with a price of 18,5 mio.kr. but it's actually a huge farm and perhaps more a commercial building than a privat residens. If I do my best at weeding out these types of commercial sales the top-5 most expensive homes in 9230 is <i>(in unadjusted prices)</i>:
-
-<br>
-<br>
-
-
-<br>
-<br>
-
-Well, I don't know usefull the information is, but it's been an fun exercise...
+Zooming in on Svenstrup/GodthÃÂ¥b, a visual inspection reveals clear clusters of red dots centered around <i>SvenstruphÃÂ¸j, AsgÃÂ¥rden, MidgÃÂ¥rden, Lunden and BirkagervÃÂ¦nget</i>. This suggest that these are the most expensive neighborhoods in Svenstrup/GodthÃÂ¥b measured in 2014-prices.Unfortunately, the data provided by Boliga doesn't identify building plots, but by using the sales date and the built date it's possible to subset the data and get a fairly accurate idea of where the building plots were located within the depicted period. It turns out that pretty much every building plot in Svenstrup/GodthÃÂ¥b is located in exactly the five neighborhoods mentioned above - i.e. it's the newly established neighborhoods that are raking in the highest prices <i> Well, proximity to SvanemÃÂ¸lleparken and having lakeview also seems to be correlated with higher prices</i>. Moreover, the large majority of building plots in the entire 9230 zip code were located in Svenstrup or GodthÃÂ¥b, which might suggest that out of the five cities in 9230 Svenstrup and GodthÃÂ¥b are experiencing the highest growth. <i>(building plots are removed from the map above)</i>
 
 <br>
 <br>
