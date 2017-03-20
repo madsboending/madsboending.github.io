@@ -136,7 +136,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 	<div id="map"></div>
 	<script type="text/javascript">
 		var map = L.map('map');
-		
+
 		// scale bar
 		L.control.scale().addTo(map);
 
@@ -178,7 +178,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 			       x == "90-100%" ? "#FF0000" :
 			       "";
 		}
-					
+
 		function style1(feature) {
 			return {
 				"color": getValue(feature.properties["Percentile"]),
@@ -195,11 +195,11 @@ With the sales data secured, the next step is to collect latitude and longitude 
 				pointToLayer: function (feature, latlng) {return L.circleMarker(latlng);},
 				style: style
 			});
-			layers[layer].addTo(map);	
+			layers[layer].addTo(map);
         	group.addLayer(layers[layer])
 			map.fitBounds(group.getBounds());
 		};
-		
+
 		if(typeof style1 == "undefined") style1 = undefined;
 		addDataToMap({
 		  "type": "FeatureCollection",
@@ -31177,7 +31177,7 @@ Zooming in on Svenstrup/Godthåb, a visual inspection reveals clear clusters of 
 <br>
 <br>
 
-The boxplot below illustrates 2014-prices pr. squaremeter for each city. The red diamond marks the mean price in each city. Both median and mean price in Svenstrup and Godthåb appears to be greater than the 3 other cities and furthermore, Svenstrup holds a small price advantage over Godthåb in 2014-prices.    
+The boxplot below illustrates 2014-prices pr. squaremeter for each city. The red diamond marks the mean price in each city. Both median and mean price in Svenstrup and Godthåb appears to be greater than the 3 other cities and furthermore, Svenstrup holds a small price advantage (or disadvantage) over Godthåb in 2014-prices.
 
 <img src="https://raw.githubusercontent.com/madsboending/madsboending.github.io/master/assets/img/boxplot2.png" alt="boxplot">
 
