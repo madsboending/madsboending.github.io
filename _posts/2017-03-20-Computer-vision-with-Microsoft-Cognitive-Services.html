@@ -1,0 +1,107 @@
+---
+layout: post
+title:  "Computer vision with Microsoft Cognitive Services"
+date:   2017-03-20
+---
+<meta charset="UTF-8">
+
+A few months ago I discovered Microsofts Cognitive Services
+
+<br>
+<br>
+
+```
+library(shiny)
+library(Roxford)
+library(shinythemes)
+
+# Build the server part ---------------------------------------------------
+
+# Define a server for the Shiny app
+server <- shinyServer(function(input, output) {
+
+  # You can access the value of the widget with input$text, e.g.
+
+  visionkey <- '139e07b6db6e4b46b00f9998582927b3'
+
+  output$text <- renderPrint({
+    t <- getDescriptionResponseURL(input$url, visionkey)
+
+    t$captions.text <- as.character(t$captions.text)
+
+    t$captions.text[1]
+
+
+
+  })
+
+  output$image <- renderText({c('<img src="',input$url,'">')})
+
+})
+
+
+# Build the ui part -------------------------------------------------------
+
+
+# Define the overall UI
+ui <- shinyUI(
+  fluidPage(theme=shinytheme("superhero"),
+            sidebarLayout(
+              sidebarPanel(
+                # Copy the line below to make a text input box
+                titlePanel("Insert the image URL"), h5("Copy and paste e.g. this url and hit send"),
+                textInput("url", label = h5("http://static.wixstatic.com/media/8dc02a_c68673e648754a7593b66cbfb5e1f6f5~mv2.jpg")), submitButton("Send"),
+                hr(),
+                fluidRow(verbatimTextOutput("text"))),
+
+              mainPanel(
+                fluidRow(column(3, htmlOutput("image"))))
+
+            )
+  )
+)
+
+# Run the app -------------------------------------------------------
+shinyApp(server, ui)
+
+
+```
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<iframe src="https://madsboending.shinyapps.io/parkingviolations/" style="border: none; width: 800px; height: 500px"></iframe>
+
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'madsboending';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
