@@ -11,7 +11,7 @@ A few months ago I discovered Microsofts Cognitive Services which is a bunch of 
 <br>
 
 
-<pre style="background-color:#c2c2a3;color:black;font-size:10px;">
+<pre style="background-color:#c2c2a3;color:black;font-size:13px;">
 library(shiny)
 library(Roxford)
 library(shinythemes)
@@ -31,18 +31,13 @@ server <- shinyServer(function(input, output) {
     t$captions.text <- as.character(t$captions.text)
 
     t$captions.text[1]
-
-
-
   })
 
   output$image <- renderText({c('<img src="',input$url,'">')})
 
 })
 
-
 # Build the ui part -------------------------------------------------------
-
 
 # Define the overall UI
 ui <- shinyUI(
