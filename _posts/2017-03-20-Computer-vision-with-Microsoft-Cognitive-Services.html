@@ -5,7 +5,7 @@ date:   2017-03-20
 ---
 <meta charset="UTF-8">
 
-A few months ago I discovered Microsofts Cognitive Services which is a bunch of APIs that makes it REAL easy to add e.g. computer vision to your product. Of course, someone already made a neat little wrapper in a R package, Roxford.
+A few months ago I discovered Microsofts Cognitive Services which is a bunch of APIs that makes it REAL easy to add e.g. computer vision to your product. Of course, someone already made a neat little wrapper as a R package, Roxford.
 
 <br>
 <br>
@@ -40,7 +40,6 @@ ui <- shinyUI(
   fluidPage(theme=shinytheme("superhero"),
             sidebarLayout(
               sidebarPanel(
-                # Copy the line below to make a text input box
                 titlePanel("Insert the image URL"), h5("Copy and paste e.g. this url and hit send"),
                 textInput("url", label = h5("http://static.wixstatic.com/media/8dc02a_c68673e648754a7593b66cbfb5e1f6f5~mv2.jpg")), submitButton("Send"),
                 hr(),
