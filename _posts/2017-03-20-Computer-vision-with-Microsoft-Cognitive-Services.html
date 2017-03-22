@@ -18,10 +18,7 @@ library(shinythemes)
 
 # Build the server part ---------------------------------------------------
 
-# Define a server for the Shiny app
 server <- shinyServer(function(input, output) {
-
-  # You can access the value of the widget with input$text, e.g.
 
   visionkey <- '139e07b6db6e4b46b00f9998582927b3'
 
@@ -39,7 +36,6 @@ server <- shinyServer(function(input, output) {
 
 # Build the ui part -------------------------------------------------------
 
-# Define the overall UI
 ui <- shinyUI(
   fluidPage(theme=shinytheme("superhero"),
             sidebarLayout(
