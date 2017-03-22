@@ -16,24 +16,6 @@ library(shiny)
 library(Roxford)
 library(shinythemes)
 
-# Build the server part ---------------------------------------------------
-
-server <- shinyServer(function(input, output) {
-
-  visionkey <- '139e07b6db6e4b46b00f9998582927b3'
-
-  output$text <- renderPrint({
-    t <- getDescriptionResponseURL(input$url, visionkey)
-
-    t$captions.text <- as.character(t$captions.text)
-
-    t$captions.text[1]
-  })
-
-  output$image <- renderText({c('<img src="',input$url,'">')})
-
-})
-
 # Build the ui part -------------------------------------------------------
 
 ui <- shinyUI(
@@ -52,8 +34,26 @@ ui <- shinyUI(
   )
 )
 
+# Build the server part ---------------------------------------------------
+
+server <- shinyServer(function(input, output) {
+
+  visionkey <- '139e07b6db6e4b46b00f9998582927b3'
+
+  output$text <- renderPrint({
+    t <- getDescriptionResponseURL(input$url, visionkey)
+
+    t$captions.text <- as.character(t$captions.text)
+
+    t$captions.text[1]
+  })
+
+  output$image <- renderText({c('<img src="',input$url,'">')})
+
+})
+
 # Run the app -------------------------------------------------------
-shinyApp(server, ui)
+shinyApp(ui, server)
 
 </pre>
 
