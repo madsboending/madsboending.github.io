@@ -5,11 +5,12 @@ date:   2017-03-20
 ---
 <meta charset="UTF-8">
 
-A few months ago I discovered Microsofts Cognitive Services which is a bunch of APIs that makes it REAL easy to add e.g. computer vision to your product. Of course, someone already made a neat little wrapper as a R package, Roxford.
+A few months ago I discovered Microsofts Cognitive Services which is a bunch of AI empowered APIs that makes it REAL easy to add e.g. computer vision to your product. Of course, someone already made a neat little wrapper around the APIs as a R package, <a target="_blank" href="https://github.com/flovv/Roxford">Roxford</a> (Apparently it was previously called Project Oxford).
 
 <br>
 <br>
 
+I took the Roxford package for spin and made a quick shiny app for testing Microsofts computer vision API. Give it a <a target="_blank" href="https://madsboending.shinyapps.io/image_recognition/">try</a> 
 
 <pre style="background-color:#c2c2a3;color:black;font-size:13px;">
 library(shiny)
@@ -26,10 +27,8 @@ ui <- shinyUI(
                 textInput("url", label = h5("http://static.wixstatic.com/media/8dc02a_c68673e648754a7593b66cbfb5e1f6f5~mv2.jpg")), submitButton("Send"),
                 hr(),
                 fluidRow(verbatimTextOutput("text"))),
-
               mainPanel(
                 fluidRow(column(3, htmlOutput("image"))))
-
             )
   )
 )
@@ -38,7 +37,7 @@ ui <- shinyUI(
 
 server <- shinyServer(function(input, output) {
 
-  visionkey <- '139e07b6db6e4b46b00f9998582927b3'
+  visionkey <- 'xxxxxxxxxxxxxxxxxxxxxxxx'
 
   output$text <- renderPrint({
     t <- getDescriptionResponseURL(input$url, visionkey)
