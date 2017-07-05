@@ -5,15 +5,28 @@ date:   2017-07-05
 ---
 <meta charset="UTF-8">
 
-My girlfriend and I are in the midst of buying a house, hence we need to take out a mortage - preferably at the best possible price. So I want to keep myself updated on the current price of the mortage we are eyeing in order to strike when the price is just right.        <a target="_blank" href="https://github.com/flovv/Roxford">Roxford</a> <i>(Apparently the project was previously called Project Oxford)</i>.
+My girlfriend and I are in the midst of buying a house, hence we need to take out a mortage - preferably at the best possible price. Therefore I want to keep myself updated on the current price of the mortage we are eyeing in order to strike when the price is just right.        <a target="_blank" href="https://github.com/flovv/Roxford">Roxford</a> <i>(Apparently the project was previously called Project Oxford)</i>.
 
 <br>
 <br>
 
-To my surprise I was unsuccesful in finding any kind of service that would shoot a daily notification to me containing the current mortage price (Well, I wanted to test out a solution in R, so i didn't bother looking THAT hard for suitable service).  
+To my surprise I was unsuccesful in finding any kind of service that would shoot a daily notification to me containing the current mortage price (Well, I wanted to test out a solution in R, so i didn't bother looking THAT hard for suitable service). So that's what I'm trying to achieve and describe in this post!
 
+<br>
+<br>
 
-<pre style="background-color:#c2c2a3;color:black;font-size:13px;">
+The tools needed are:
+
+<br>
+
+<ul>
+  <li>R and Rstudio</li>
+  <li>Amazon Web Services (AWS)</li>
+  <li>MobaXterm</li>
+  <li>Pushover.net API</li>
+</ul>
+
+<pre style="background-color:#2c6b46;color:white;font-size:13px;">
 library(shiny)
 library(Roxford)
 library(shinythemes)
