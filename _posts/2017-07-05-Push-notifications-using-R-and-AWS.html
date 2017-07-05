@@ -1,0 +1,78 @@
+---
+layout: post
+title:  "Push notifications using R and AWS"
+date:   2017-07-05
+---
+<meta charset="UTF-8">
+
+My girlfriend and I are in the midst of buying a house, hence we need to take out a mortage - preferably at the best possible price. So I want to keep myself updated on the current price of the mortage we are eyeing in order to strike when the price is just right.        <a target="_blank" href="https://github.com/flovv/Roxford">Roxford</a> <i>(Apparently the project was previously called Project Oxford)</i>.
+
+<br>
+<br>
+
+To my surprise I was unsuccesful in finding any kind of service that would shoot a daily notification to me containing the current mortage price (Well, I wanted to test out a solution in R, so i didn't bother looking THAT hard for suitable service).  
+
+
+<pre style="background-color:#c2c2a3;color:black;font-size:13px;">
+library(shiny)
+library(Roxford)
+library(shinythemes)
+
+# Build the ui part -------------------------------------------------------
+
+ui <- shinyUI(
+  fluidPage(theme=shinytheme("superhero"),
+            sidebarLayout(
+              sidebarPanel(
+                titlePanel("Insert the image URL"), h5("Copy and paste e.g. this url and hit send"),
+                textInput("url", label = h5("http://static.wixstatic.com/media/8dc02a_c68673e648754a7593b66cbfb5e1f6f5~mv2.jpg")), submitButton("Send"),
+                hr(),
+                fluidRow(verbatimTextOutput("text"))),
+              mainPanel(
+                fluidRow(column(3, htmlOutput("image"))))
+            )
+  )
+)
+
+# Build the server part ---------------------------------------------------
+
+server <- shinyServer(function(input, output) {
+
+  visionkey <- 'xxxxxxxxxxxxxxxxxxxxxxxx'
+
+  output$text <- renderPrint({
+    t <- getDescriptionResponseURL(input$url, visionkey)
+
+    t$captions.text <- as.character(t$captions.text)
+
+    t$captions.text[1]
+  })
+
+  output$image <- renderText({c('<img src="',input$url,'">')})
+
+})
+
+# Run the app -------------------------------------------------------
+shinyApp(ui, server)
+
+</pre>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'madsboending';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
