@@ -26,47 +26,80 @@ The tools needed are:
   <li>Pushover.net API</li>
 </ul>
 
+<br>
+<br>
+
+I have Rstudio set up on a virtual linux machine from AWS - I won't go over how to install Rstudio on a virtual machine, I followed <a target="_blank" href="http://blog.yhat.com/posts/r-in-the-cloud-part-1.html">this</a> and <a target="_blank" href="https://www.r-statistics.com/2015/06/setting-rstudio-server-using-amazon-web-services-aws-a-step-by-step-screenshots-tutorial/">this</a> tutorial and I suggest you do the same. The next step is to write a R script that scrapes a website for mortage prices and use <a target="_blank" href="https://pushover.net/">Pushovers</a> API to send out a notification and then schedule this script to run daily. MobaXterm is used to remotely access the virtual linux machine and set a cron job to run the R script daily.
+
+<br>
+<br>
+
+Lets get started on the R script
+
+
+<script type="text/javascript">
+
+ library(shiny)
+ library(Roxford)
+ library(shinythemes)
+
+ # Build the ui part -------------------------------------------------------
+
+ ui <- shinyUI(
+   fluidPage(theme=shinytheme("superhero"),
+             sidebarLayout(
+               sidebarPanel(
+                 titlePanel("Insert the image URL"), h5("Copy and paste e.g. this url and hit send"),
+                 textInput("url", label = h5("http://static.wixstatic.com/media/8dc02a_c68673e648754a7593b66cbfb5e1f6f5~mv2.jpg")), submitButton("Send"),
+                 hr(),
+                 fluidRow(verbatimTextOutput("text"))),
+               mainPanel(
+                 fluidRow(column(3, htmlOutput("image"))))
+             )
+   )
+ )
+
+ </script>
+
 <pre style="background-color:#2c6b46;color:white;font-size:13px;">
-library(shiny)
-library(Roxford)
-library(shinythemes)
+  #################################### BASICS #############################################
 
-# Build the ui part -------------------------------------------------------
+  # Author: Mads Bønding
+  # Date:05-07-2017
+  # Document version: 1.0
+  # R version: 3.3.2 sessionInfo()
+  # R Studio: 1.0.44
+  # Purpose: Scrape mortage prices and send a daily push notification with current price to my phone/watch using R, AWS and Pushover.
 
-ui <- shinyUI(
-  fluidPage(theme=shinytheme("superhero"),
-            sidebarLayout(
-              sidebarPanel(
-                titlePanel("Insert the image URL"), h5("Copy and paste e.g. this url and hit send"),
-                textInput("url", label = h5("http://static.wixstatic.com/media/8dc02a_c68673e648754a7593b66cbfb5e1f6f5~mv2.jpg")), submitButton("Send"),
-                hr(),
-                fluidRow(verbatimTextOutput("text"))),
-              mainPanel(
-                fluidRow(column(3, htmlOutput("image"))))
-            )
-  )
-)
 
-# Build the server part ---------------------------------------------------
+  ################################## LIBRARIES ############################################
+  library(dplyr) # v. 0.4.3
+  library(tidyr) # v. 0.4.1
+  library(rvest) # v. 0.3.2
+  library(spaRnord) # v. 0.1.1
 
-server <- shinyServer(function(input, output) {
+  ################################# DATA WRANGLING ###########################################
 
-  visionkey <- 'xxxxxxxxxxxxxxxxxxxxxxxx'
+  # read and store the url
+  obl_2pct_uafdrag <- read_html("http://www.sydbank.dk/investering/analyser/obligationer/obligation?kode=DK0009504755&type=Obligation&sektor=NONE&straks=true")
 
-  output$text <- renderPrint({
-    t <- getDescriptionResponseURL(input$url, visionkey)
+  # Extract the relavent nodes
+  current_price <- obl_2pct_uafdrag %>%
+    html_node("td:nth-child(3)") %>%
+    html_text() %>%
+    as.character()
 
-    t$captions.text <- as.character(t$captions.text)
+  daily_change <- obl_2pct_uafdrag %>%
+    html_node("td:nth-child(7)") %>%
+    html_text() %>%
+    as.character()
 
-    t$captions.text[1]
-  })
+  # User key to be used in the send_push function
+  userkey <- 'uxno32z76kp6cj282n1nczftgx43px'
 
-  output$image <- renderText({c('<img src="',input$url,'">')})
+  message <- paste("Kursen på 2.pct uden afdrag er idag ",current_price, " og har ændret sig ", daily_change, " siden igår.")
 
-})
-
-# Run the app -------------------------------------------------------
-shinyApp(ui, server)
+  send_push(userkey, message, title = "2. pct uden afdrag")
 
 </pre>
 
