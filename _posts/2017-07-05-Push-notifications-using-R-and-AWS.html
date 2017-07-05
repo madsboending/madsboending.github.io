@@ -67,6 +67,15 @@ Lets get started on the R script
     html_text() %>%
     as.character()
 
+</pre>
+
+<br>
+
+The mortage price is scraped from Sydbanks website and I use SelectorGadget (a Google Chrome add-in) to identify exactly the CSS selector of interest. In this case it is the current sales price (td:nth-child(3)) and the point-change (td:nth-child(7)) since yesterday. The CSS selector are then fed to html_node() function from rvest which graps the price and point-change and store them as a string.
+
+<br>
+
+<pre style="background-color:#2c6b46;color:white;font-size:13px;">
   # User key to be used in the send_push function
   userkey <- 'uxno32z76kp6cj282n1nczftgx43px'
 
@@ -79,7 +88,7 @@ Lets get started on the R script
 <br>
 <br>
 
-The mortage price is scraped from Sydbanks website and I use SelectorGadget, which is a chrome add-in, to identify exactly the CSS selector of interest. In this case it is the current sales price (td:nth-child(3)) and the point-change (td:nth-child(7)) since yesterday.
+
 
 <br>
 <br>
