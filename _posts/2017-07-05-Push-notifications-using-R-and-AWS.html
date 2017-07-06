@@ -63,13 +63,11 @@ The mortage price is scraped from Sydbanks website and I use SelectorGadget (a G
   # Extract the relevent information from obl_2pct_uafdrag
   current_price <- obl_2pct_uafdrag %>%
     html_node("td:nth-child(3)") %>%
-    html_text() %>%
-    as.character()
+    html_text()
 
   daily_change <- obl_2pct_uafdrag %>%
     html_node("td:nth-child(7)") %>%
-    html_text() %>%
-    as.character()
+    html_text()
 
 </pre>
 
