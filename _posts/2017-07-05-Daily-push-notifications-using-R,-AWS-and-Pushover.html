@@ -67,7 +67,7 @@ The mortage price is scraped from Sydbanks website and I use SelectorGadget (a G
 
 <br>
 
-Next step is putting together a message to send and actually sending it. I am using the <code>send_push()</code> function from Torben Engelmeyers  <a target="_blank" href="https://cran.r-project.org/web/packages/notifyR/index.html">notifyR</a> package to send myself a push notification. NotifyR uses the API from Pushover and we need to create an account on  <a target="_blank" href="https://pushover.net/">pushover.net</a> and copy the userkey to our script in order to use the <code>send_push()</code> function. Then use the <code>paste()</code> to construct the message containing <code>current_price</code> and <code>daily_change</code> and include the message in <code>send_push()</code>.
+Next step is putting together a message to send and actually sending it. I am using the <code>send_push()</code> function from Torben Engelmeyers  <a target="_blank" href="https://cran.r-project.org/web/packages/notifyR/index.html">notifyR</a> package to send myself a push notification. NotifyR uses the API from Pushover and we need to create an account on  <a target="_blank" href="https://pushover.net/">pushover.net</a> and copy the userkey to our script in order to use the <code>send_push()</code> function. Then use the <code>paste()</code> function to construct the message containing <code>current_price</code> and <code>daily_change</code> and include the message in <code>send_push()</code>.
 
 <br>
 
