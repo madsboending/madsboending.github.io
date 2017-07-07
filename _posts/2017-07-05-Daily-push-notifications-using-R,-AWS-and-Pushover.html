@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Push notifications using R and AWS"
+title:  "Daily push notifications using R, AWS and Pushover"
 date:   2017-07-05
 ---
 <meta charset="UTF-8">
@@ -26,9 +26,7 @@ The tools needed are:
   <li>Pushover.net API</li>
 </ul>
 
-<br>
-
-I have Rstudio set up on a virtual linux machine from AWS - I won't go over how to install Rstudio on a virtual machine, I followed <a target="_blank" href="http://blog.yhat.com/posts/r-in-the-cloud-part-1.html">this</a> and <a target="_blank" href="https://www.r-statistics.com/2015/06/setting-rstudio-server-using-amazon-web-services-aws-a-step-by-step-screenshots-tutorial/">this</a> tutorial and I suggest you do the same. The next step is to write a super simple R script that scrapes a website for mortage prices and uses <a target="_blank" href="https://pushover.net/">Pushovers</a> API to send out a notification and then schedule this script to run daily. MobaXterm is used to remotely access the virtual linux machine and set a cron job to run the R script daily.
+I have Rstudio set up on a EC2 instance from AWS - I won't go over how to install Rstudio on a AWS instance, I followed <a target="_blank" href="http://blog.yhat.com/posts/r-in-the-cloud-part-1.html">this</a> and <a target="_blank" href="https://www.r-statistics.com/2015/06/setting-rstudio-server-using-amazon-web-services-aws-a-step-by-step-screenshots-tutorial/">this</a> tutorial and I suggest you do the same. The next step is to write a simple R script that scrapes a website for mortage prices and uses <a target="_blank" href="https://pushover.net/">Pushovers</a> API to send out a notification and then schedule this script to run daily. MobaXterm is used to remotely access the virtual linux machine and set a cron job to run the R script daily.
 
 <br>
 <br>
@@ -69,12 +67,11 @@ The mortage price is scraped from Sydbanks website and I use SelectorGadget (a G
 
 <br>
 
-Next step is putting together a message to send and actually sending it. I am using the send_push() function from Torben Engelmeyers  <a target="_blank" href="https://cran.r-project.org/web/packages/notifyR/index.html">notifyR</a> package to send myself a push notification. NotifyR uses the API from Pushover and we need to setup an account on  <a target="_blank" href="https://pushover.net/">pushover.net</a> and copy the userkey in order to use the send_push() function.
+Next step is putting together a message to send and actually sending it. I am using the send_push() function from Torben Engelmeyers  <a target="_blank" href="https://cran.r-project.org/web/packages/notifyR/index.html">notifyR</a> package to send myself a push notification. NotifyR uses the API from Pushover and we need to create an account on  <a target="_blank" href="https://pushover.net/">pushover.net</a> and copy the userkey to our script in order to use the send_push() function. Then use the paste() to construct the message containing current_price and daily_change and include the message in send_push().
 
 <br>
 
 <pre style="background-color:#2c6b46;color:white;font-size:13px;">
-  # User key to be used in the send_push function
   userkey <- 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 
   message <- paste("Kursen på 2.pct uden afdrag er idag ",current_price, " og har ændret sig ", daily_change, " siden igår.")
@@ -86,7 +83,15 @@ Next step is putting together a message to send and actually sending it. I am us
 <br>
 <br>
 
+With the script sorted out the next step is to make it run daily on my AWS instance. For windows users there is neat little addin to Rstudio that easily lets you schedule your R scripts but since my EC2 instance is running an ubuntu server I need to use another method.
+<br>
+<br>
+I need to start a SSH session in MobaXterm(or any other SSH client) and connect to the AWS instance and run the command <i>crontab -e</i>. This will open an editor that lets you specify when and which script you want to schedule.
 
+<br>
+<br>
+
+<img src="https://raw.githubusercontent.com/madsboending/madsboending.github.io/master/assets/img/crontab_arrow.jpg" alt="crontab">
 
 <br>
 <br>
