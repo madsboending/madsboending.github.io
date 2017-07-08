@@ -86,7 +86,7 @@ Next step is putting together a message to send and actually sending it. I am us
 With the script sorted out the next step is to make it run daily on my AWS instance. For windows users there is neat little addin to Rstudio that easily lets you schedule your R scripts but since my EC2 instance is running an ubuntu server I can't use this method.
 <br>
 <br>
-I need to start a SSH session in MobaXterm(or any other SSH client) and connect to the AWS instance and then run the command <code>crontab -e</code>. This will open an editor that lets me specify when and which script I want to schedule. All I need to do is add the line pictured below which specifies the path to the script I want to schedule and that I want it to run daily at 7.15 a.m (be aware that the script will execute based on the timestamp of the server which may not match your local time). Hit exit and save the file and the script is scheduled!
+I need to start a SSH session in MobaXterm(or any other SSH client) and connect to the AWS instance and then run the command <code>crontab -e</code>. This will open an editor that lets me specify when and which script I want to schedule. All I need to do is add the line pictured below to the editor which specifies the path to the script I want to schedule and that I want it to run daily at 7.15 a.m (be aware that the script will execute based on the timestamp of the server which may not match your local time). Hit exit and save the file and the script is scheduled!
 
 <br>
 <br>
