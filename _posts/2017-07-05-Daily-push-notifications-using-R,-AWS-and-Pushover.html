@@ -31,7 +31,7 @@ I have Rstudio set up on a EC2 instance from AWS - I won't go over how to instal
 <br>
 <br>
 
-The mortage price is scraped from Sydbanks website and I use SelectorGadget (a Google Chrome add-in) to identify precisely the CSS selector of interest. In this case it is the current sales price (td:nth-child(3)) and the point-change (td:nth-child(7)) since yesterday. The CSS selector are then fed to <code>html_node()</code> and <code>html_text()</code> functions from the rvest package which graps the price and point-change and store them as a string.
+The mortage price is scraped from Sydbanks <a target="_blank" href="http://www.sydbank.dk/investering/analyser/obligationer/obligation?kode=DK0009504755&type=Obligation&sektor=NONE&straks=true">website</a> and I use SelectorGadget (a Google Chrome add-in) to identify precisely the CSS selector of interest. In this case it is the current sales price (td:nth-child(3)) and the point-change (td:nth-child(7)) since yesterday. The CSS selector are then fed to the <code>html_node()</code> and <code>html_text()</code> functions from the rvest package which graps the price and point-change and store them as a string.
 
 <pre style="background-color:#c2c2a3;color:black;font-size:13px;">
   #################################### BASICS #############################################
@@ -96,7 +96,7 @@ I need to start a SSH session in MobaXterm(or any other SSH client) and connect 
 <br>
 <br>
 
-It works! I now get daily updates on the mortage price and I got to try out some new things and killed a couple of hours putting it together...
+It works! I now get daily updates on the mortage price. As a bonus I got to try out some new things and killed a couple of hours putting it together...
 
 <br>
 <br>
