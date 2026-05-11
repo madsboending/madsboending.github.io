@@ -39,7 +39,6 @@ With the sales data secured, the next step is to collect latitude and longitude 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-1.9.4/leaflet.min.css" />
 	<script src="https://cdn.leafletjs.com/leaflet-1.9.4/leaflet.min.js"></script>
-	<link rel="dat1" type="application/json" href="sale.geojson" />
 	<style type="text/css">
 		body {
 			padding: 0;
@@ -135,14 +134,14 @@ With the sales data secured, the next step is to collect latitude and longitude 
 <body>
 	<div id="map"></div>
 	<script type="text/javascript">
-		var map = L.map('map');
+		var map = L.map('map', {center: [56.965, 9.85], zoom: 12});
 
 		// scale bar
 		L.control.scale().addTo(map);
 
 		// base layer
 		var baseMaps = {};
-		var baseMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {"attribution":"&copy; <a href=\"http://openstreetmap.org/copyright\", target=\"_blank\">OpenStreetMap contributors</a>"});
+		var baseMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright\", target=\"_blank\">OpenStreetMap contributors</a>"});
 		baseMap.addTo(map);
 		baseMaps["OpenStreetMap"] = baseMap;
 
@@ -192,7 +191,10 @@ With the sales data secured, the next step is to collect latitude and longitude 
 		function addDataToMap(data, style, layer) {
 			layers[layer] = L.geoJson(data, {
 				onEachFeature: (typeof onEachFeature == "undefined") ? undefined : onEachFeature,
-				pointToLayer: function (feature, latlng) {return L.circleMarker(latlng);},
+				pointToLayer: function (feature, latlng) {
+					var markerStyle = (style != undefined) ? style(feature) : {};
+					return L.circleMarker(latlng, markerStyle);
+				},
 				style: style
 			});
 			layers[layer].addTo(map);
