@@ -37,8 +37,8 @@ With the sales data secured, the next step is to collect latitude and longitude 
 	<meta charset="utf-8">
 	<meta name="generator" content="leafletR">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-1.9.4/leaflet.min.css" />
-	<script src="https://cdn.leafletjs.com/leaflet-1.9.4/leaflet.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 	<style type="text/css">
 		body {
 			padding: 0;
@@ -141,7 +141,7 @@ With the sales data secured, the next step is to collect latitude and longitude 
 
 		// base layer
 		var baseMaps = {};
-		var baseMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright\", target=\"_blank\">OpenStreetMap contributors</a>"});
+		var baseMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright\", target=\"_blank\">OpenStreetMap contributors</a>"});
 		baseMap.addTo(map);
 		baseMaps["OpenStreetMap"] = baseMap;
 
